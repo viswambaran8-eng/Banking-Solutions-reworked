@@ -442,6 +442,7 @@ nav ul li a.active-page::after {
   border-radius: 50%;
   color: #fff;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .footer-socials a:hover {
