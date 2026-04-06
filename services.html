@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Solutions</title>
+    <link rel="stylesheet" href="./services.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./Assets/logo.webp" alt="" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" class="active-page">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="div">
+        <div class="div">
+          <a href="./login.html">
+            <button class="btn">Login</button>
+          </a>
+        </div>
+        <div class="menu-icon" id="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- <div class="sidebar-logo">STACKLY<span>.</span></div> -->
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="" />
+          </a>
+        </div>
+
+        <div class="close-icon" id="close-trigger">&times;</div>
+      </div>
+      <ul class="side-links">
+        <li class="side-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="side-item"><a href="./about.html">About</a></li>
+        <li class="side-item"><a href="./services.html">Services</a></li>
+        <li class="side-item"><a href="./blog.html">Blog</a></li>
+        <li class="side-item"><a href="./contact.html">Contact</a></li>
+        <li class="side-item"><a href="./login.html">Login</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <button class="side-log-btn">Open An Account</button>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="banking-hero">
+      <div class="hero-container">
+        <div class="hero-left">
+          <div class="status-tag">
+            <span class="pulse-dot"></span> Tier-1 Banking Protocol
+          </div>
+          <h1 class="hero-title">
+            Smart <span class="blue-text">Banking</span><br />
+            Solutions for Everyone
+          </h1>
+          <p class="hero-description">
+            Tailored financial services designed to simplify your life. Deploy
+            capital with global-scale precision and real-time liquidity.
+          </p>
+          <div class="hero-btns">
+            <a class="btn-primary" onclick="initAccount()">
+              Initialize Account
+            </a>
+            <a class="btn-outline" onclick="viewServices()"> View Services </a>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="image-wrapper">
+            <img
+              src="./Assets/servicehero_11zon.webp"
+              alt="Global Banking"
+              class="main-img"
+            />
+
+            <div class="counter-card">
+              <div class="counter-icon">
+                <i class="fa-solid fa-users-viewfinder"></i>
+              </div>
+              <div class="counter-data">
+                <span class="number" id="userCount">0</span
+                ><span class="suffix">M+</span>
+                <p>Active Global Users</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1 -->
+
+    <section class="how-it-works">
+      <!-- <div class="section-header">
+        <div class="header-badge">
+          <span class="badge-line"></span>
+          <span class="badge-text">OPERATIONAL EXCELLENCE</span>
+        </div>
+        <h2 class="header-title">
+          How It <span class="blue-text">Works</span>
+        </h2>
+        <p class="header-subtitle">
+          Our four-stage protocol ensures your assets are deployed with maximum
+          liquidity and institutional-grade security.
+        </p>
+      </div> -->
+
+      <div class="container">
+        <h2 class="section-title">
+          Get Started in <span class="blue-text">4 Steps</span>
+        </h2>
+
+        <div class="stepper-wrapper">
+          <div class="step-line-container">
+            <div class="step-line-progress"></div>
+          </div>
+
+          <div class="step-node" id="step-1">
+            <div class="step-icon">
+              <i class="fa-solid fa-user-plus"></i>
+              <div class="step-number">1</div>
+            </div>
+            <div class="step-content">
+              <h3>Sign Up</h3>
+              <p>Create your institutional account in seconds.</p>
+            </div>
+          </div>
+
+          <div class="step-node" id="step-2">
+            <div class="step-icon">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div class="step-number">2</div>
+            </div>
+            <div class="step-content">
+              <h3>Verify Identity</h3>
+              <p>Surgical-grade biometric and KYC verification.</p>
+            </div>
+          </div>
+
+          <div class="step-node" id="step-3">
+            <div class="step-icon">
+              <i class="fa-solid fa-layer-group"></i>
+              <div class="step-number">3</div>
+            </div>
+            <div class="step-content">
+              <h3>Choose Service</h3>
+              <p>Select from our suite of liquid banking tools.</p>
+            </div>
+          </div>
+
+          <div class="step-node" id="step-4">
+            <div class="step-icon">
+              <i class="fa-solid fa-rocket"></i>
+              <div class="step-number">4</div>
+            </div>
+            <div class="step-content">
+              <h3>Start Banking</h3>
+              <p>Deploy capital and manage global assets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 -->
+
+    <section class="security-vault">
+      <div class="container">
+        <div class="section-header">
+          <div class="header-badge">
+            <span class="badge-line"></span>
+            <span class="badge-text">ENCRYPTION PROTOCOL</span>
+          </div>
+          <h2 class="header-title">
+            Surgical <span class="blue-text">Security</span>
+          </h2>
+          <p class="header-subtitle">
+            Your assets are guarded by Tier-1 defense systems and real-time
+            fraud monitoring.
+          </p>
+        </div>
+
+        <div class="vault-interface">
+          <div class="shield-hub">
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="ripple"></div>
+            <div class="shield-main">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div class="lock-icon"><i class="fa-solid fa-lock"></i></div>
+            </div>
+          </div>
+
+          <div class="nodes-container">
+            <div class="security-node" id="node-encryption">
+              <div class="node-icon"><i class="fa-solid fa-key"></i></div>
+              <div class="node-text">
+                <h3>256-bit Encryption</h3>
+                <p>Military-grade data scrambling for total privacy.</p>
+              </div>
+            </div>
+
+            <div class="security-node" id="node-fraud">
+              <div class="node-icon">
+                <i class="fa-solid fa-user-shield"></i>
+              </div>
+              <div class="node-text">
+                <h3>Fraud Protection</h3>
+                <p>AI-driven monitoring for suspicious activity.</p>
+              </div>
+            </div>
+
+            <div class="security-node" id="node-mfa">
+              <div class="node-icon">
+                <i class="fa-solid fa-fingerprint"></i>
+              </div>
+              <div class="node-text">
+                <h3>Multi-factor Auth</h3>
+                <p>Biometric and hardware-key secondary verification.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 -->
+
+    <section class="pricing-terminal">
+      <div class="container">
+        <div class="section-header">
+          <div class="header-badge">
+            <span class="badge-line"></span>
+            <span class="badge-text">ASSET TIERS</span>
+          </div>
+          <h2 class="header-title">
+            Flexible <span class="blue-text">Plans</span>
+          </h2>
+
+          <div class="pricing-toggle">
+            <span class="toggle-label active" id="label-monthly">Monthly</span>
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="billingToggle"
+                onchange="toggleBilling()"
+              />
+              <span class="slider round"></span>
+            </label>
+            <span class="toggle-label" id="label-yearly"
+              >Yearly <small>(Save 20%)</small></span
+            >
+          </div>
+        </div>
+
+        <div class="pricing-grid">
+          <div class="price-card" id="plan-basic">
+            <div class="plan-header">
+              <h3>Basic</h3>
+              <div class="price">
+                ₹<span class="amt" data-monthly="49" data-yearly="449">49</span
+                ><small>/mo</small>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Free account setup</li>
+              <li><i class="fa-solid fa-check"></i> Virtual Debit Card</li>
+              <li><i class="fa-solid fa-check"></i> Standard Support</li>
+            </ul>
+            <a class="btn-plan-ghost">Initialize</a>
+          </div>
+
+          <div class="price-card featured" id="plan-pro">
+            <div class="popular-tag">MOST POPULAR</div>
+            <div class="plan-header">
+              <h3>Pro</h3>
+              <div class="price">
+                ₹<span class="amt" data-monthly="999" data-yearly="8599"
+                  >999</span
+                ><small>/mo</small>
+              </div>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Advanced Analytics</li>
+              <li><i class="fa-solid fa-check"></i> Global Wire Transfers</li>
+              <li><i class="fa-solid fa-check"></i> Priority Node Access</li>
+              <li><i class="fa-solid fa-check"></i> Multi-Currency Support</li>
+            </ul>
+            <a class="btn-plan-solid">Go Pro</a>
+          </div>
+
+          <div class="price-card" id="plan-enterprise">
+            <div class="plan-header">
+              <h3>Enterprise</h3>
+              <div class="price">Custom</div>
+            </div>
+            <ul class="plan-features">
+              <li><i class="fa-solid fa-check"></i> Bespoke Solutions</li>
+              <li><i class="fa-solid fa-check"></i> Dedicated Asset Manager</li>
+              <li><i class="fa-solid fa-check"></i> API Infrastructure</li>
+            </ul>
+            <a class="btn-plan-ghost">Contact Sales</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 -->
+
+    <section class="faq-terminal">
+      <div class="container">
+        <div class="section-header">
+          <div class="header-badge">
+            <span class="badge-line"></span>
+            <span class="badge-text">SUPPORT</span>
+          </div>
+          <h2 class="header-title">
+            Common <span class="blue-text">Questions</span>
+          </h2>
+          <p class="header-subtitle">
+            Everything you need to know about our Tier-1 banking infrastructure.
+          </p>
+        </div>
+
+        <div class="faq-wrapper">
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <h3>Is my money safe?</h3>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <div class="answer-inner">
+                <p>
+                  Absolutely. We employ military-grade 256-bit AES encryption
+                  and maintain capital reserves that exceed Tier-1 regulatory
+                  requirements. Your assets are guarded by the same protocols
+                  used by global central banks.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <h3>How fast are transactions?</h3>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <div class="answer-inner">
+                <p>
+                  Our internal ledger systems process transactions in real-time.
+                  For external transfers, we utilize high-velocity liquidity
+                  bridges that ensure funds reach their destination in seconds,
+                  rather than days.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" onclick="toggleFAQ(this)">
+            <div class="faq-question">
+              <h3>Are there hidden fees?</h3>
+              <div class="faq-icon"><i class="fa-solid fa-plus"></i></div>
+            </div>
+            <div class="faq-answer">
+              <div class="answer-inner">
+                <p>
+                  Transparency is a core tenet of our banking philosophy. All
+                  fees are disclosed upfront within the terminal before any
+                  transaction is authorized. No maintenance or surprise
+                  processing costs.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="premium-footer">
+      <div class="footer-upper">
+        <!-- Column 1: Brand & Brief -->
+        <div class="footer-col brand-col">
+          <div class="logo footer-logo">
+            <a href="./index.html">
+              <img src="./Assets/logo.webp" alt="NovaBank Logo" />
+            </a>
+          </div>
+          <p class="brand-brief">
+            Redefining the future of digital finance with medical-grade
+            precision and bank-grade security. Empowering global citizens with
+            seamless, intelligent banking solutions.
+          </p>
+          <div class="footer-socials">
+            <p><i class="fa-brands fa-linkedin-in"></i></p>
+            <p><i class="fa-brands fa-x-twitter"></i></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About </a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h4 class="footer-title">Banking Services</h4>
+          <ul class="footer-links">
+            <li><a href="./error.html">Personal Accounts</a></li>
+            <li><a href="./error.html">Business Solutions</a></li>
+            <li><a href="./error.html">Crypto Custody</a></li>
+            <li><a href="./error.html">Wealth Management</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter/Contact -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-title">Stay Connected</h4>
+          <p class="small-text">Subscribe for elite financial insights.</p>
+          <form class="footer-subscribe" action="./error.html">
+            <input type="email" placeholder="Email Address" />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i>+912345678</span>
+            <span><i class="fa-solid fa-envelope"></i>support@stackly.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="divider-line"></div>
+          <div class="bottom-flex">
+            <p class="copyright">
+              &copy; 2026 Stackly-Bank Solutions. All Rights Reserved.
+            </p>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </body>
+</html>
+
+<!-- footer -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.from(".footer-col", {
+      scrollTrigger: {
+        trigger: ".premium-footer",
+        start: "top 90%",
+      },
+      opacity: 0,
+      y: 40,
+      stagger: 0.15,
+      duration: 1,
+      ease: "power2.out",
+    });
+
+    // Fade in the bottom bar divider
+    gsap.from(".divider-line", {
+      scrollTrigger: ".footer-bottom",
+      opacity: 0,
+      duration: 2,
+      ease: "power4.inOut",
+    });
+  });
+</script>
+
+<!-- hero -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tl = gsap.timeline({ defaults: { ease: "expo.out", duration: 1.5 } });
+
+    // 1. Reveal Left & Right Sections
+    tl.to(".hero-left", { autoAlpha: 1, x: 0 }).to(
+      ".hero-right",
+      { autoAlpha: 1, x: 0 },
+      "-=1.2",
+    );
+
+    // 2. The GSAP Number Counter Function
+    const countTarget = { val: 0 };
+    gsap.to(countTarget, {
+      val: 45, // Your target number
+      duration: 3,
+      delay: 0.5,
+      ease: "power3.inOut",
+      onUpdate: () => {
+        document.getElementById("userCount").innerHTML = Math.ceil(
+          countTarget.val,
+        );
+      },
+    });
+
+    // 3. Ambient Floating Animation
+    gsap.to(".counter-card", {
+      y: "-=15",
+      repeat: -1,
+      yoyo: true,
+      duration: 3,
+      ease: "sine.inOut",
+    });
+
+    // 4. Parallax Effect on Hover
+    const hero = document.querySelector(".banking-hero");
+    hero.addEventListener("mousemove", (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+
+      gsap.to(".main-img", {
+        rotationY: x * 0.2,
+        rotationX: -y * 0.2,
+        duration: 1,
+      });
+      gsap.to(".counter-card", { x: x, y: y, duration: 1.2 });
+    });
+  });
+
+  // --- BUTTON FUNCTIONS ---
+  function initAccount() {
+    alert("Surgical Banking Protocol: Initializing secure account setup.");
+  }
+
+  function viewServices() {
+    console.log("Navigating to ecosystem services...");
+  }
+</script>
+
+<!-- 1 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Register ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    const stepsTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".stepper-wrapper",
+        start: "top 75%", // Starts when wrapper hits 75% of viewport
+        toggleActions: "play none none none",
+      },
+    });
+
+    // 1. Draw the line first
+    stepsTL.to(".step-line-progress", {
+      scaleX: 1,
+      duration: 1.5,
+      ease: "power2.inOut",
+    });
+
+    // For mobile (vertical line), we animate scaleY
+    if (window.innerWidth <= 1024) {
+      gsap.set(".step-line-progress", { scaleX: 1, scaleY: 0 });
+      stepsTL.to(
+        ".step-line-progress",
+        {
+          scaleY: 1,
+          duration: 1.5,
+          ease: "power2.inOut",
+        },
+        0,
+      );
+    }
+
+    // 2. Pop the steps sequentially
+    stepsTL.to(
+      ".step-node",
+      {
+        autoAlpha: 1,
+        scale: 1,
+        y: 0,
+        stagger: 0.3, // 0.3s delay between each step
+        duration: 0.8,
+        ease: "back.out(1.7)",
+      },
+      "-=1",
+    ); // Start popping while line is drawing
+  });
+
+  // --- FUNCTIONAL LOGIC ---
+  function triggerStepAction(stepNumber) {
+    console.log(`Node ${stepNumber} activated. Protocol: Syncing...`);
+    // Logic for opening modals or specific step interactions
+  }
+</script>
+
+<!-- section-header -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Reveal the header with a smooth fade-in and slight upward move
+    gsap.to(".section-header", {
+      scrollTrigger: {
+        trigger: ".section-header",
+        start: "top 85%", // Starts animation when header is 85% from top of screen
+      },
+      autoAlpha: 1, // Handles both opacity and visibility
+      y: 0,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    // Small "Pulse" for the badge line
+    gsap.to(".badge-line", {
+      width: 40,
+      duration: 1.5,
+      repeat: -1,
+      yoyo: true,
+      ease: "sine.inOut",
+    });
+  });
+</script>
+
+<!-- 2 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Entrance Animation
+    const securityTL = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".security-vault",
+        start: "top 70%",
+      },
+    });
+
+    securityTL
+      .from(".shield-main", {
+        scale: 0,
+        autoAlpha: 0,
+        duration: 1.2,
+        ease: "back.out(1.7)",
+      })
+      .to(
+        ".security-node",
+        {
+          autoAlpha: 1,
+          x: 0,
+          stagger: 0.2,
+          duration: 0.8,
+          ease: "power3.out",
+        },
+        "-=0.5",
+      );
+
+    // 2. Continuous Ripple Animation (The "Live" System)
+    gsap.to(".ripple", {
+      scale: 4,
+      autoAlpha: 0,
+      duration: 3,
+      stagger: 1,
+      repeat: -1,
+      ease: "power1.out",
+    });
+
+    // 3. Glowing Lock Animation
+    gsap.to(".lock-icon", {
+      boxShadow: "0 0 20px rgb(32, 146, 192)",
+      repeat: -1,
+      yoyo: true,
+      duration: 1.5,
+      ease: "sine.inOut",
+    });
+  });
+
+  // --- FUNCTIONAL LOGIC ---
+  function runSecurityScan() {
+    console.log("Initializing Tier-1 Integrity Check...");
+    // Simulate a scan effect
+    gsap.to(".security-node", {
+      borderColor: "rgb(32, 146, 192)",
+      duration: 0.2,
+      stagger: 0.1,
+      repeat: 1,
+      yoyo: true,
+    });
+  }
+</script>
+
+<!-- 3 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Sequential Reveal
+    gsap.to(".price-card", {
+      scrollTrigger: {
+        trigger: ".pricing-grid",
+        start: "top 75%",
+      },
+      autoAlpha: 1,
+      y: 0,
+      stagger: 0.2,
+      duration: 1.2,
+      ease: "power4.out",
+    });
+
+    // 2. 3D Hover Effect
+    // const cards = document.querySelectorAll('.price-card');
+    // cards.forEach(card => {
+    //   card.addEventListener('mousemove', (e) => {
+    //     const rect = card.getBoundingClientRect();
+    //     const x = e.clientX - rect.left;
+    //     const y = e.clientY - rect.top;
+    //     const xc = rect.width / 2;
+    //     const yc = rect.height / 2;
+    //     const dx = x - xc;
+    //     const dy = y - yc;
+
+    //     gsap.to(card, {
+    //       rotationY: dx / 15,
+    //       rotationX: -dy / 15,
+    //       duration: 0.5,
+    //       ease: "power2.out"
+    //     });
+    //   });
+
+    //   card.addEventListener('mouseleave', () => {
+    //     gsap.to(card, { rotationX: 0, rotationY: 0, duration: 0.8 });
+    //   });
+    // });
+  });
+
+  // --- FUNCTIONAL LOGIC ---
+  function toggleBilling() {
+    const isYearly = document.getElementById("billingToggle").checked;
+    const amounts = document.querySelectorAll(".amt");
+
+    // Toggle Label Classes
+    document
+      .getElementById("label-monthly")
+      .classList.toggle("active", !isYearly);
+    document
+      .getElementById("label-yearly")
+      .classList.toggle("active", isYearly);
+
+    amounts.forEach((amt) => {
+      const target = isYearly ? amt.dataset.yearly : amt.dataset.monthly;
+
+      // Animate Price Change
+      gsap.to(amt, {
+        innerText: target,
+        duration: 0.5,
+        snap: { innerText: 1 },
+        ease: "power2.inOut",
+      });
+    });
+  }
+</script>
+
+<!-- 4 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Entrance Animation for FAQ list
+    gsap.to(".faq-item", {
+      scrollTrigger: {
+        trigger: ".faq-wrapper",
+        start: "top 80%",
+      },
+      autoAlpha: 1, // Opacity and Visibility
+      y: 0,
+      stagger: 0.15,
+      duration: 1,
+      ease: "power3.out",
+    });
+  });
+
+  // --- FUNCTIONAL LOGIC ---
+  function toggleFAQ(element) {
+    const answer = element.querySelector(".faq-answer");
+    const icon = element.querySelector(".faq-icon");
+    const isActive = element.classList.contains("active");
+
+    // Close all other FAQs (Optional: Tier-1 Cleanliness)
+    document.querySelectorAll(".faq-item").forEach((item) => {
+      if (item !== element) {
+        item.classList.remove("active");
+        gsap.to(item.querySelector(".faq-answer"), {
+          maxHeight: 0,
+          duration: 0.4,
+        });
+        gsap.to(item.querySelector(".faq-icon"), {
+          rotation: 0,
+          duration: 0.4,
+        });
+      }
+    });
+
+    // Toggle current item
+    if (!isActive) {
+      element.classList.add("active");
+      // Animate height to auto (using scrollHeight for precision)
+      gsap.to(answer, {
+        maxHeight: answer.scrollHeight,
+        duration: 0.5,
+        ease: "power2.inOut",
+      });
+      // Rotate + to × (45 degrees makes a plus look like a cross)
+      gsap.to(icon, { rotation: 45, duration: 0.4 });
+    } else {
+      element.classList.remove("active");
+      gsap.to(answer, { maxHeight: 0, duration: 0.4, ease: "power2.inOut" });
+      gsap.to(icon, { rotation: 0, duration: 0.4 });
+    }
+  }
+</script>

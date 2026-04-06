@@ -1,0 +1,1554 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Solutions</title>
+    <link rel="icon" href="./Assets/icon.webp" />
+    <link rel="stylesheet" href="./dashboard.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="app-container">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <a href="index.html" class="brand">
+            <img src="./Assets/logo.webp" alt="logo" class="logo" />
+          </a>
+          <button class="mobile-toggle" id="close-sidebar">
+            <span class="material-symbols-outlined" style="color: beige">
+              <i class="fa-solid fa-x"></i>
+            </span>
+          </button>
+        </div>
+
+        <nav class="nav-menu">
+          <p class="nav-label">Finance Terminal</p>
+
+          <button class="nav-item active" data-target="view-home">
+            <span class="material-symbols-outlined">
+              <i class="fa-solid fa-gauge-high"></i>
+            </span>
+            Portfolio Overview
+          </button>
+
+          <button class="nav-item" data-target="view-trending">
+            <span class="material-symbols-outlined">
+              <i class="fa-solid fa-building-columns"></i>
+            </span>
+            Asset Classes
+          </button>
+
+          <button class="nav-item" data-target="view-library">
+            <span class="material-symbols-outlined">
+              <i class="fa-solid fa-vault"></i>
+            </span>
+            Treasury Hub
+          </button>
+
+          <button class="nav-item" data-target="view-alerts">
+            <span class="material-symbols-outlined">
+              <i class="fa-solid fa-shield-halved"></i>
+            </span>
+            Risk Protocols
+          </button>
+
+          <button class="nav-item" data-target="view-billing">
+            <span class="material-symbols-outlined">
+              <i class="fa-solid fa-file-invoice-dollar"></i>
+            </span>
+            Settlement History
+          </button>
+
+          <p class="nav-label">Security Logic</p>
+
+          <button
+            onclick="window.location.href = './error.html'"
+            class="nav-item"
+          >
+            <span class="material-symbols-outlined">
+              <i class="fa-solid fa-user-shield"></i>
+            </span>
+            Identity Node
+          </button>
+
+          <button
+            onclick="window.location.href = 'login.html'"
+            class="nav-item"
+          >
+            <span class="material-symbols-outlined">
+              <i class="fa-solid fa-power-off"></i>
+            </span>
+            Secure Sign-Out
+          </button>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <header class="top-navbar">
+          <div style="display: flex; align-items: center; gap: 12px">
+            <button class="mobile-toggle" id="open-sidebar">
+              <span class="material-symbols-outlined">
+                <i class="fa-solid fa-bars"></i>
+              </span>
+            </button>
+            <h3
+              class="brand-font"
+              style="
+                color: rgb(32, 146, 192);
+                font-weight: 400;
+                letter-spacing: 1px;
+              "
+            >
+              <span style="font-weight: 700">Stackly</span> Banking Solutions
+            </h3>
+          </div>
+
+          <div class="user-controls">
+            <button
+              onclick="window.location.href = './error.html'"
+              class="icon-btn"
+              style="position: relative"
+            >
+              <span
+                class="material-symbols-outlined"
+                style="color: rgba(255, 255, 255, 0.6)"
+              >
+                <i class="fa-solid fa-bell"></i>
+              </span>
+              <span
+                style="
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 8px;
+                  height: 8px;
+                  background: rgb(32, 146, 192);
+                  border-radius: 50%;
+                  border: 2px solid #000;
+                  box-shadow: 0 0 5px rgb(32, 146, 192);
+                "
+              ></span>
+            </button>
+
+            <div class="profile-menu-wrap">
+              <div
+                class="avatar"
+                id="profile-avatar"
+                style="background: rgb(32, 146, 192)"
+              >
+                JD
+              </div>
+
+              <div class="profile-dropdown glass-panel" id="profile-dropdown">
+                <div class="dropdown-user-info">
+                  <div
+                    class="avatar"
+                    style="
+                      width: 36px;
+                      height: 36px;
+                      font-size: 0.9rem;
+                      background: rgb(32, 146, 192);
+                    "
+                  >
+                    JD
+                  </div>
+                  <div>
+                    <p class="dropdown-name">John Doe</p>
+                    <p
+                      id="userEmailDisplay"
+                      style="font-size: 0.75rem; opacity: 0.7"
+                    >
+                      Institutional Partner
+                    </p>
+                  </div>
+                </div>
+
+                <div class="dropdown-divider"></div>
+
+                <a href="./error.html" class="dropdown-item">
+                  <span class="material-symbols-outlined">
+                    <i class="fa-solid fa-user-shield"></i>
+                  </span>
+                  Security Settings
+                </a>
+                <a href="./error.html" class="dropdown-item">
+                  <span class="material-symbols-outlined">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                  </span>
+                  Transaction Logs
+                </a>
+                <a href="./error.html" class="dropdown-item">
+                  <span class="material-symbols-outlined">
+                    <i class="fa-solid fa-layer-group"></i>
+                  </span>
+                  Asset Portfolio
+                </a>
+
+                <div class="dropdown-divider"></div>
+
+                <a href="login.html" class="dropdown-item logout-action">
+                  <span class="material-symbols-outlined">
+                    <i class="fa-solid fa-power-off"></i>
+                  </span>
+                  Secure Terminate
+                </a>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div class="dashboard-body">
+          <section id="view-home" class="content-section active-section">
+            <div style="margin-bottom: 32px">
+              <h1 class="page-title">Welcome Back, Authorized Partner</h1>
+              <p style="color: var(--text-muted)">
+                <span
+                  class="live-indicator"
+                  style="
+                    background: rgb(32, 146, 192);
+                    box-shadow: 0 0 10px rgb(32, 146, 192);
+                  "
+                ></span>
+                Liquidity Servers Online • Market Synced: Just now
+              </p>
+            </div>
+
+            <div class="grid-4">
+              <div
+                class="glass-panel"
+                style="
+                  margin-bottom: 0;
+                  border-left: 3px solid rgb(32, 146, 192);
+                "
+              >
+                <div class="kpi-header">
+                  <span>Asset Valuation</span>
+                  <span
+                    class="material-symbols-outlined"
+                    style="color: rgb(32, 146, 192)"
+                  >
+                    <i class="fa-solid fa-chart-line"></i>
+                  </span>
+                </div>
+                <div class="kpi-value">$42.8M</div>
+                <div
+                  style="
+                    color: rgb(32, 146, 192);
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                  "
+                >
+                  +12.4% this quarter
+                </div>
+              </div>
+
+              <div
+                class="glass-panel"
+                style="
+                  margin-bottom: 0;
+                  border-left: 3px solid rgb(32, 146, 192);
+                "
+              >
+                <div class="kpi-header">
+                  <span>Settlement Rate</span>
+                  <span
+                    class="material-symbols-outlined"
+                    style="color: rgb(32, 146, 192)"
+                  >
+                    <i class="fa-solid fa-handshake-check"></i>
+                  </span>
+                </div>
+                <div class="kpi-value">
+                  99<span style="font-size: 1.5rem; color: var(--text-muted)"
+                    >.98%</span
+                  >
+                </div>
+                <div
+                  style="
+                    color: rgb(32, 146, 192);
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                  "
+                >
+                  Optimal Throughput
+                </div>
+              </div>
+
+              <div
+                class="glass-panel"
+                style="
+                  margin-bottom: 0;
+                  border-left: 3px solid rgb(32, 146, 192);
+                "
+              >
+                <div class="kpi-header">
+                  <span>Active Dispatches</span>
+                  <span
+                    class="material-symbols-outlined"
+                    style="color: rgb(32, 146, 192)"
+                  >
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                  </span>
+                </div>
+                <div class="kpi-value">18</div>
+                <div
+                  style="color: #ff4d4d; font-size: 0.85rem; font-weight: 500"
+                >
+                  2 requiring MFA authorization
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-2-layout">
+              <div
+                class="glass-panel"
+                style="display: flex; flex-direction: column"
+              >
+                <div class="kpi-header" style="margin-bottom: 24px">
+                  <h3 style="color: var(--text-main); font-size: 1.1rem">
+                    Institutional Capital Flow Analysis
+                  </h3>
+                </div>
+                <div style="position: relative; height: 250px">
+                  <div class="canvas-holder">
+                    <canvas id="throughputChart"></canvas>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass-panel">
+                <div class="kpi-header" style="margin-bottom: 24px">
+                  <h3 style="color: var(--text-main); font-size: 1.1rem">
+                    Recent Settlement Node Activity
+                  </h3>
+                </div>
+                <div class="table-container">
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td
+                          style="
+                            font-family: &quot;DM Sans&quot;;
+                            font-weight: 500;
+                          "
+                        >
+                          Global Equity Swap #921
+                        </td>
+                        <td>
+                          <span
+                            class="status-pill"
+                            style="
+                              background: rgba(32, 146, 192, 0.1);
+                              color: rgb(32, 146, 192);
+                              border: 1px solid rgb(32, 146, 192);
+                            "
+                          >
+                            In Clearing
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-family: &quot;DM Sans&quot;;
+                            font-weight: 500;
+                          "
+                        >
+                          Treasury Bond Dispatch
+                        </td>
+                        <td>
+                          <span
+                            class="status-pill"
+                            style="
+                              background: rgba(0, 255, 255, 0.1);
+                              color: #00ffff;
+                              border: 1px solid #00ffff;
+                            "
+                          >
+                            Confirmed
+                          </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          style="
+                            font-family: &quot;DM Sans&quot;;
+                            font-weight: 500;
+                          "
+                        >
+                          Cross-Border FX Node
+                        </td>
+                        <td>
+                          <span
+                            class="status-pill"
+                            style="
+                              background: rgba(255, 165, 0, 0.1);
+                              color: orange;
+                              border: 1px solid orange;
+                            "
+                          >
+                            Awaiting MFA
+                          </span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-3">
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Portfolio Allocation</h3>
+                <div style="display: flex; flex-direction: column; gap: 12px">
+                  <div>
+                    <p style="font-size: 0.85rem">Liquid Cash & Equities</p>
+                    <div class="progress-track">
+                      <div
+                        class="progress-fill"
+                        style="width: 80%; background: rgb(32, 146, 192)"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <p style="font-size: 0.85rem">Fixed Income Assets</p>
+                    <div class="progress-track">
+                      <div
+                        class="progress-fill"
+                        style="width: 65%; background: #00ffff"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <p style="font-size: 0.85rem">Alternative Investments</p>
+                    <div class="progress-track">
+                      <div
+                        class="progress-fill"
+                        style="width: 45%; background: #9d00ff"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Market Logs</h3>
+                <ul
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 12px;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <li>🛡️ Security: Biometric ID re-verified</li>
+                  <li>📉 Markets: HKEX Exchange node connected</li>
+                  <li>⚠️ Alert: Volatility detected in FX Pair USD/EUR</li>
+                </ul>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Terminal Integrity</h3>
+                <div style="display: flex; flex-direction: column; gap: 10px">
+                  <p>Encryption: <strong>Quantum-Safe Active</strong></p>
+                  <p>Execution: <strong>4.2ms High-Freq</strong></p>
+                  <p>Node Status: <strong>Global Grid Stable</strong></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section id="view-library" class="content-section">
+            <div
+              class="myflex"
+              style="
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                margin-bottom: 32px;
+              "
+            >
+              <div>
+                <h1 class="page-title">Capital Asset Ledger</h1>
+                <p style="color: var(--text-muted)">
+                  Manage institutional holdings, financial instruments, and
+                  active liquidity deployments across global markets.
+                </p>
+              </div>
+              <button
+                onclick="window.location.href = './error.html'"
+                class="btn-primary"
+                style="
+                  display: flex;
+                  align-items: center;
+                  gap: 8px;
+                  background: rgb(32, 146, 192);
+                  color: #000;
+                  border: none;
+                  padding: 10px 20px;
+                  border-radius: 8px;
+                  font-weight: bold;
+                  cursor: pointer;
+                "
+              >
+                <span
+                  class="material-symbols-outlined"
+                  style="font-size: 1.2rem"
+                >
+                  <i class="fa-solid fa-plus"></i>
+                </span>
+                Issue New Instrument
+              </button>
+            </div>
+
+            <div class="glass-panel">
+              <div style="display: flex; gap: 16px; margin-bottom: 24px">
+                <button
+                  onclick="window.location.href = './error.html'"
+                  class="icon-btn"
+                  style="
+                    border-radius: 8px;
+                    width: auto;
+                    padding: 0 16px;
+                    display: flex;
+                    gap: 8px;
+                    border: 1px solid rgba(32, 146, 192, 0.3);
+                    color: rgb(32, 146, 192);
+                  "
+                >
+                  <span class="material-symbols-outlined">
+                    <i class="fa-solid fa-filter"></i>
+                  </span>
+                  Asset Class Filters
+                </button>
+              </div>
+
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Folio ID</th>
+                      <th>Instrument & Class</th>
+                      <th>Deployment Status</th>
+                      <th>Yield / Risk Specs</th>
+                      <th>Protocol Integrity</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr style="background: rgba(32, 146, 192, 0.03)">
+                      <td
+                        style="
+                          font-family: &quot;DM Sans&quot;;
+                          font-weight: 500;
+                        "
+                      >
+                        BANK-9201-EQ
+                      </td>
+                      <td>Global Tech Equity (Growth)</td>
+                      <td>
+                        <span
+                          style="
+                            color: rgb(32, 146, 192);
+                            font-weight: 600;
+                            font-size: 0.85rem;
+                          "
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            style="font-size: 1rem; vertical-align: middle"
+                          >
+                            <i class="fa-solid fa-chart-line"></i>
+                          </span>
+                          MARKET ACTIVE
+                        </span>
+                      </td>
+                      <td>3.2% Div • High Volatility</td>
+                      <td>
+                        <span
+                          class="status-pill"
+                          style="
+                            background: rgba(32, 146, 192, 0.1);
+                            color: rgb(32, 146, 192);
+                            border: 1px solid rgb(32, 146, 192);
+                          "
+                        >
+                          <span
+                            class="live-indicator"
+                            style="
+                              width: 6px;
+                              height: 6px;
+                              background: rgb(32, 146, 192);
+                            "
+                          ></span>
+                          Synced 100%
+                        </span>
+                      </td>
+                      <td>
+                        <button
+                          onclick="window.location.href = './error.html'"
+                          class="icon-btn"
+                          style="
+                            width: 32px;
+                            height: 32px;
+                            color: rgb(32, 146, 192);
+                          "
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            style="font-size: 1.1rem"
+                          >
+                            <i class="fa-solid fa-eye"></i>
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td
+                        style="
+                          font-family: &quot;DM Sans&quot;;
+                          font-weight: 500;
+                        "
+                      >
+                        TREA-7741-FX
+                      </td>
+                      <td>Gov Treasury Bond (Fixed)</td>
+                      <td style="color: var(--text-muted); font-size: 0.85rem">
+                        In Clearing
+                      </td>
+                      <td>4.5% Fixed • Sovereign A+</td>
+                      <td>
+                        <span class="status-pill status-success"
+                          >Collateralized</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          onclick="window.location.href = './error.html'"
+                          class="icon-btn"
+                          style="width: 32px; height: 32px"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            style="font-size: 1.1rem"
+                          >
+                            <i class="fa-solid fa-file-contract"></i>
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+
+                    <tr>
+                      <td
+                        style="
+                          font-family: &quot;DM Sans&quot;;
+                          font-weight: 500;
+                        "
+                      >
+                        CRYP-7742-V
+                      </td>
+                      <td>Stablecoin Liquidity Node</td>
+                      <td style="color: #ff4d4d; font-size: 0.85rem">
+                        Auth Required
+                      </td>
+                      <td>Dynamic APY • Zero-Knowledge</td>
+                      <td>
+                        <span
+                          class="status-pill"
+                          style="
+                            background: rgba(255, 77, 77, 0.1);
+                            color: #ff4d4d;
+                            border: 1px solid #ff4d4d;
+                          "
+                          >Re-verify Node</span
+                        >
+                      </td>
+                      <td>
+                        <button
+                          onclick="window.location.href = './error.html'"
+                          class="icon-btn"
+                          style="width: 32px; height: 32px"
+                        >
+                          <span
+                            class="material-symbols-outlined"
+                            style="font-size: 1.1rem"
+                          >
+                            <i class="fa-solid fa-shield-halved"></i>
+                          </span>
+                        </button>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="grid-3">
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px; color: rgb(32, 146, 192)">
+                  Portfolio Statistics
+                </h3>
+                <p>Total Assets: <strong>1,482 Holdings</strong></p>
+                <p>Active Deployments: <strong>842 Positions</strong></p>
+                <p>Pending Settlements: <strong>12 In-Transit</strong></p>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Terminal Feed</h3>
+                <ul
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    font-size: 0.9rem;
+                  "
+                >
+                  <li>📝 Policy: Updated BASEL III Compliance</li>
+                  <li>📥 New Arrival: $2.4M Bond Maturity</li>
+                  <li>✅ Certified: Q1 Audit Node Complete</li>
+                </ul>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Asset Mix</h3>
+                <p>Equities: 620 Units</p>
+                <p>Fixed Income: 410 Units</p>
+                <p>Digital Assets: 320 Units</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="view-trending" class="content-section">
+            <div style="margin-bottom: 32px">
+              <h1 class="page-title">Critical Exposure Alerts</h1>
+              <p style="color: var(--text-muted)">
+                Real-time monitoring of high-priority liquidity mandates and
+                regulatory risk-calibration tasks.
+              </p>
+            </div>
+
+            <div class="grid-3">
+              <!-- Card 1: HFT Node / Risk Audit -->
+              <div class="glass-panel" style="border-top: 2px solid #8b0000">
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 style="margin-bottom: 4px">HFT-TRADING NODE-4</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted)">
+                      ID: NODE-990 • Arbitrage Desk
+                    </p>
+                  </div>
+                  <span
+                    class="status-pill"
+                    style="
+                      padding: 2px 8px;
+                      font-size: 0.65rem;
+                      background: #8b0000;
+                      color: white;
+                      border: none;
+                    "
+                  >
+                    <span
+                      class="live-indicator"
+                      style="width: 6px; height: 6px; background: white"
+                    ></span>
+                    RISK RE-CALIBRATION
+                  </span>
+                </div>
+
+                <div
+                  style="
+                    margin-top: 24px;
+                    background: rgba(0, 0, 0, 0.4);
+                    height: 120px;
+                    border-radius: 12px;
+                    border: var(--border-subtle);
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    overflow: hidden;
+                  "
+                >
+                  <i
+                    class="fa-solid fa-vault"
+                    style="font-size: 2.5rem; color: rgba(32, 146, 192, 0.1)"
+                  ></i>
+                  <div
+                    style="
+                      position: absolute;
+                      bottom: 8px;
+                      left: 12px;
+                      font-family: monospace;
+                      font-size: 0.8rem;
+                      color: rgb(32, 146, 192);
+                    "
+                  >
+                    AUTH_LOG: Volatility Hedge Seq. 04
+                  </div>
+                </div>
+
+                <div style="margin-top: 24px">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      font-size: 0.85rem;
+                      margin-bottom: 8px;
+                    "
+                  >
+                    <span>Audit Progress</span>
+                    <span style="color: rgb(32, 146, 192)">82%</span>
+                  </div>
+                  <div class="progress-track">
+                    <div
+                      class="progress-fill"
+                      style="
+                        width: 82%;
+                        background: linear-gradient(
+                          90deg,
+                          #228b22,
+                          rgb(32, 146, 192)
+                        );
+                        box-shadow: 0 0 10px rgba(32, 146, 192, 0.3);
+                      "
+                    ></div>
+                  </div>
+                </div>
+
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 24px;
+                    border-top: var(--border-subtle);
+                    padding-top: 16px;
+                  "
+                >
+                  <div>
+                    <p
+                      style="
+                        font-size: 0.7rem;
+                        color: var(--text-muted);
+                        text-transform: uppercase;
+                      "
+                    >
+                      Stability Rating
+                    </p>
+                    <p style="font-weight: 500; color: rgb(32, 146, 192)">
+                      Grade AA+
+                    </p>
+                  </div>
+                  <div style="text-align: right">
+                    <p
+                      style="
+                        font-size: 0.7rem;
+                        color: var(--text-muted);
+                        text-transform: uppercase;
+                      "
+                    >
+                      Last Rebalanced
+                    </p>
+                    <p style="font-weight: 500">March 2026</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: SWIFT/Clearing Shipment -->
+              <div
+                class="glass-panel"
+                style="border-top: 2px solid rgb(32, 146, 192)"
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 style="margin-bottom: 4px">CROSS-BORDER CLEARING</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted)">
+                      FX Treasury • SWIFT Network
+                    </p>
+                  </div>
+                  <span
+                    class="status-pill status-success"
+                    style="
+                      padding: 2px 8px;
+                      font-size: 0.65rem;
+                      border: 1px solid rgb(32, 146, 192);
+                      color: rgb(32, 146, 192);
+                    "
+                    >WIRE IN TRANSIT</span
+                  >
+                </div>
+
+                <div
+                  style="
+                    margin-top: 24px;
+                    background: rgba(32, 146, 192, 0.05);
+                    padding: 16px;
+                    border-radius: 12px;
+                    border: var(--border-subtle);
+                    text-align: center;
+                  "
+                >
+                  <span
+                    class="material-symbols-outlined"
+                    style="
+                      font-size: 2rem;
+                      color: rgb(32, 146, 192);
+                      margin-bottom: 8px;
+                    "
+                  >
+                    <i class="fa-solid fa-money-bill-transfer"></i>
+                  </span>
+                  <p style="font-size: 0.9rem; color: var(--text-muted)">
+                    Batch #1 Settlement. ETA to Clearing House Ledger is 14:00
+                    Monday.
+                  </p>
+                </div>
+
+                <a href="./error.html">
+                  <button
+                    class="btn-primary"
+                    style="
+                      width: 100%;
+                      margin-top: 24px;
+                      background: rgb(32, 146, 192);
+                      color: #000;
+                      border: none;
+                      padding: 10px;
+                      font-weight: bold;
+                      cursor: pointer;
+                      border-radius: 4px;
+                    "
+                  >
+                    <i
+                      class="fa-solid fa-receipt"
+                      style="margin-right: 8px"
+                    ></i>
+                    Track Transaction
+                  </button>
+                </a>
+              </div>
+
+              <!-- Card 3: Compliance Array -->
+              <div
+                class="glass-panel"
+                style="border-top: 2px solid var(--amber)"
+              >
+                <div
+                  style="
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                  "
+                >
+                  <div>
+                    <h3 style="margin-bottom: 4px">COMPLIANCE LEDGER</h3>
+                    <p style="font-size: 0.85rem; color: var(--text-muted)">
+                      AML/KYC Dept • Maintenance
+                    </p>
+                  </div>
+                  <span
+                    class="status-pill status-warning"
+                    style="padding: 2px 8px; font-size: 0.65rem"
+                    >Audit FRIDAY</span
+                  >
+                </div>
+
+                <div
+                  style="
+                    margin-top: 24px;
+                    background: rgba(245, 158, 11, 0.05);
+                    padding: 16px;
+                    border-radius: 12px;
+                    border: 1px solid rgba(245, 158, 11, 0.2);
+                  "
+                >
+                  <p
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--amber);
+                      margin-bottom: 4px;
+                    "
+                  >
+                    SOX Compliance Due
+                  </p>
+                  <p style="font-weight: 500; font-size: 0.9rem">
+                    Bi-annual internal anti-money laundering protocol inspection
+                    scheduled for March 27.
+                  </p>
+                </div>
+
+                <a href="./error.html">
+                  <button
+                    class="btn-primary"
+                    style="
+                      width: 100%;
+                      margin-top: 24px;
+                      background: transparent;
+                      color: var(--amber);
+                      border: 1px solid var(--amber);
+                    "
+                  >
+                    <i
+                      class="fa-regular fa-calendar-check"
+                      style="margin-right: 8px"
+                    ></i>
+                    Review Schedule
+                  </button>
+                </a>
+              </div>
+            </div>
+
+            <div class="grid-3">
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Terminal Uptime</h3>
+                <p>Market Connectivity (MTD)</p>
+                <h2 style="color: #fff">1,450.5 Hrs</h2>
+                <p style="margin-top: 10px">Highest Volume Category</p>
+                <h3 style="color: rgb(32, 146, 192)">Equity Derivatives</h3>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Pending Settlements</h3>
+                <ul
+                  style="
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    font-size: 0.9rem;
+                    color: var(--text-muted);
+                  "
+                >
+                  <li>
+                    <i
+                      class="fa-solid fa-clock-rotate-left"
+                      style="margin-right: 8px; color: rgb(32, 146, 192)"
+                    ></i>
+                    Interbank Loan — T+2 Cycle
+                  </li>
+                  <li>
+                    <i
+                      class="fa-solid fa-clock-rotate-left"
+                      style="margin-right: 8px; color: rgb(32, 146, 192)"
+                    ></i>
+                    Institutional Repo — Collateral Check
+                  </li>
+                  <li>
+                    <i
+                      class="fa-solid fa-clock-rotate-left"
+                      style="margin-right: 8px; color: rgb(32, 146, 192)"
+                    ></i>
+                    Bond Maturity — S/N 9011
+                  </li>
+                </ul>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 16px">Regulatory Status</h3>
+                <p style="color: rgb(32, 146, 192)">BASEL IV: 2026 Compliant</p>
+                <p style="margin-top: 10px">Next SEC Audit: April 7, 2026</p>
+              </div>
+            </div>
+          </section>
+
+          <section id="view-alerts" class="content-section">
+            <div style="margin-bottom: 32px">
+              <h1 class="page-title">Operational Critical Alerts</h1>
+              <p style="color: var(--text-muted)">
+                <span
+                  class="live-indicator"
+                  style="background: #8b0000; box-shadow: 0 0 10px #8b0000"
+                ></span>
+                Attention Required: 2 High-Priority Settlement Failures Detected
+              </p>
+            </div>
+
+            <div class="grid-3">
+              <!-- Card 1: Processing Failures -->
+              <div class="glass-panel" style="border-left: 3px solid #8b0000">
+                <div class="kpi-header">
+                  <span>Processing Anomalies</span>
+                  <i
+                    class="fa-solid fa-triangle-exclamation"
+                    style="color: #8b0000"
+                  ></i>
+                </div>
+                <div class="kpi-value">02</div>
+                <div
+                  style="color: #8b0000; font-size: 0.85rem; font-weight: 500"
+                >
+                  Liquidity Breach Risk
+                </div>
+              </div>
+
+              <!-- Card 2: Compliance/Audit -->
+              <div class="glass-panel" style="border-left: 3px solid #f5c518">
+                <div class="kpi-header">
+                  <span>Regulatory Filings</span>
+                  <i
+                    class="fa-solid fa-file-invoice-dollar"
+                    style="color: #f5c518"
+                  ></i>
+                </div>
+                <div class="kpi-value">07</div>
+                <div
+                  style="color: #f5c518; font-size: 0.85rem; font-weight: 500"
+                >
+                  Pending EOD Submission
+                </div>
+              </div>
+
+              <!-- Card 3: Resolved Systems -->
+              <div
+                class="glass-panel"
+                style="border-left: 3px solid rgb(32, 146, 192)"
+              >
+                <div class="kpi-header">
+                  <span>Cleared Batches</span>
+                  <i
+                    class="fa-solid fa-building-columns"
+                    style="color: rgb(32, 146, 192)"
+                  ></i>
+                </div>
+                <div class="kpi-value">14</div>
+                <div
+                  style="
+                    color: rgb(32, 146, 192);
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                  "
+                >
+                  Settlement Finality Reached
+                </div>
+              </div>
+            </div>
+
+            <div class="glass-panel">
+              <h3 style="margin-bottom: 24px">Financial Command Center</h3>
+              <div class="table-container">
+                <table>
+                  <thead>
+                    <tr
+                      style="
+                        color: var(--text-muted);
+                        font-size: 0.8rem;
+                        text-transform: uppercase;
+                      "
+                    >
+                      <th>Asset ID</th>
+                      <th>Breach Type</th>
+                      <th>Network/Node</th>
+                      <th>Risk Level</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>#LGR-NODE-992</strong></td>
+                      <td>Double-Spend Synchronization Error</td>
+                      <td>Primary Clearing Cluster</td>
+                      <td>
+                        <span
+                          class="status-pill"
+                          style="
+                            background: rgba(139, 0, 0, 0.2);
+                            color: #ff4d4d;
+                            border: 1px solid #8b0000;
+                          "
+                          >CRITICAL</span
+                        >
+                      </td>
+                    </tr>
+                    <tr>
+                      <td><strong>#GATE-SWIFT-401</strong></td>
+                      <td>Encryption Handshake Latency</td>
+                      <td>Cross-Border Gateway</td>
+                      <td>
+                        <span
+                          class="status-pill"
+                          style="
+                            background: rgba(245, 197, 24, 0.1);
+                            color: #f5c518;
+                            border: 1px solid #f5c518;
+                          "
+                          >WARNING</span
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </section>
+
+          <section id="view-billing" class="content-section">
+            <div style="margin-bottom: 32px">
+              <h1 class="page-title">Treasury Services & Billing</h1>
+              <p style="color: var(--text-muted)">
+                Manage institutional credit lines, liquidity facilities, and
+                clearing subscriptions.
+              </p>
+            </div>
+
+            <div class="grid-2-layout">
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 20px">Liquidity Facility Coverage</h3>
+                <div
+                  style="
+                    padding: 20px;
+                    background: rgba(32, 146, 192, 0.05);
+                    border-radius: 12px;
+                    border: 1px solid rgba(32, 146, 192, 0.2);
+                  "
+                >
+                  <p
+                    style="
+                      font-size: 0.8rem;
+                      color: rgb(32, 146, 192);
+                      text-transform: uppercase;
+                    "
+                  >
+                    Prime Brokerage Tier
+                  </p>
+                  <h2 style="margin: 10px 0">
+                    $42,850.00
+                    <span style="font-size: 1rem; color: var(--text-muted)"
+                      >/mo</span
+                    >
+                  </h2>
+                  <div class="progress-track" style="margin-top: 15px">
+                    <div
+                      class="progress-fill"
+                      style="width: 75%; background: rgb(32, 146, 192)"
+                    ></div>
+                  </div>
+                  <p
+                    style="
+                      font-size: 0.8rem;
+                      margin-top: 10px;
+                      color: var(--text-muted);
+                    "
+                  >
+                    75% of Capital Allocation Utilized
+                  </p>
+                </div>
+              </div>
+
+              <div class="glass-panel">
+                <h3 style="margin-bottom: 20px">Settlement Ledger</h3>
+                <div style="display: flex; flex-direction: column; gap: 15px">
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+                      padding-bottom: 10px;
+                    "
+                  >
+                    <div>
+                      <p style="margin: 0; font-weight: 500">TXN-2026-089</p>
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 0.8rem;
+                          color: var(--text-muted);
+                        "
+                      >
+                        Cross-Border SWIFT Messaging Fees
+                      </p>
+                    </div>
+                    <span style="color: rgb(32, 146, 192)">$1,240.00</span>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+                    "
+                  >
+                    <div>
+                      <p style="margin: 0; font-weight: 500">TXN-2026-088</p>
+                      <p
+                        style="
+                          margin: 0;
+                          font-size: 0.8rem;
+                          color: var(--text-muted);
+                        "
+                      >
+                        Quarterly Compliance Audit Fee
+                      </p>
+                    </div>
+                    <span style="color: rgb(32, 146, 192)">$8,900.00</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="grid-3" style="margin-top: 24px">
+              <div
+                class="glass-panel"
+                style="text-align: center; cursor: pointer"
+              >
+                <a href="./error.html">
+                  <i
+                    class="fa-solid fa-file-contract"
+                    style="
+                      font-size: 2rem;
+                      color: rgb(32, 146, 192);
+                      margin-bottom: 10px;
+                    "
+                  ></i>
+                </a>
+                <p style="font-size: 0.9rem">
+                  Download Master Netting Agreement
+                </p>
+              </div>
+              <div
+                class="glass-panel"
+                style="text-align: center; cursor: pointer"
+              >
+                <a href="./error.html">
+                  <i
+                    class="fa-solid fa-vault"
+                    style="
+                      font-size: 2rem;
+                      color: rgb(32, 146, 192);
+                      margin-bottom: 10px;
+                    "
+                  ></i>
+                </a>
+                <p style="font-size: 0.9rem">Collateral Schedule</p>
+              </div>
+              <div
+                class="glass-panel"
+                style="text-align: center; cursor: pointer"
+              >
+                <a href="./error.html">
+                  <i
+                    class="fa-solid fa-handshake-angle"
+                    style="
+                      font-size: 2rem;
+                      color: rgb(32, 146, 192);
+                      margin-bottom: 10px;
+                    "
+                  ></i>
+                </a>
+                <p style="font-size: 0.9rem">Correspondent Bank Terms</p>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  AOS.init({
+    once: true,
+    duration: 1000,
+    easing: "ease-out-cubic",
+    startEvent: "aos:ready", // manual trigger
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<!-- <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const userEmail = sessionStorage.getItem("userEmail");
+    const adminEmail = sessionStorage.getItem("adminEmail");
+
+    const displayEmail = userEmail || adminEmail;
+
+    if (displayEmail) {
+      document.getElementById("userEmailDisplay").textContent =
+        "Welcome, " + displayEmail;
+    } else {
+      window.location.href = "login.html";
+    }
+  });
+</script> -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // ✅ Get email (clean way)
+    const emailEl = document.getElementById("userEmailDisplay");
+    const email = sessionStorage.getItem("loggedInUser");
+
+    if (email) {
+      emailEl.textContent = "Welcome, " + email;
+    } else {
+      window.location.href = "login.html";
+    }
+
+    // ✅ Sidebar toggle (Remains functional for the new layout)
+    const sidebar = document.getElementById("sidebar");
+
+    document
+      .getElementById("open-sidebar")
+      .addEventListener("click", () => sidebar.classList.add("open"));
+
+    document
+      .getElementById("close-sidebar")
+      .addEventListener("click", () => sidebar.classList.remove("open"));
+
+    // ✅ Hardware Utilization Chart (Operational Uptime)
+    const ctx = document.getElementById("throughputChart");
+
+    if (ctx) {
+      const context = ctx.getContext("2d");
+
+      // Medical/Tech Gradient: Lawn Green to Transparent
+      let gradient = context.createLinearGradient(0, 0, 0, 250);
+      gradient.addColorStop(0, "rgb(32, 146, 192)"); // Lawn Green
+      gradient.addColorStop(1, "rgb(32, 146, 192)"); // Transparent
+
+      new Chart(context, {
+        type: "line",
+        data: {
+          labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+          datasets: [
+            {
+              label: "Fleet Uptime (Hours)",
+              data: [18, 22, 19, 24, 21, 14, 12], // Average hours active per day
+              borderColor: "rgb(32, 146, 192x)",
+              backgroundColor: gradient,
+              fill: true,
+              tension: 0.4, // Smooth curve for a high-end UI feel
+              pointRadius: 5,
+              pointBackgroundColor: "#000",
+              pointBorderColor: "rgb(32, 146, 192x)",
+              pointBorderWidth: 2,
+              pointHoverRadius: 7,
+            },
+          ],
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          plugins: {
+            legend: {
+              display: false, // Cleaner for analytical dashboards
+            },
+            tooltip: {
+              backgroundColor: "rgba(0, 0, 0, 0.8)",
+              titleColor: "rgb(32, 146, 192x)",
+              bodyColor: "#fff",
+              borderColor: "rgba(124, 252, 0, 0.3)",
+              borderWidth: 1,
+              displayColors: false,
+              callbacks: {
+                label: function (context) {
+                  return `Active: ${context.raw} Hours`;
+                },
+              },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+              max: 24, // Cap at 24 hours for daily utilization
+              grid: {
+                color: "rgba(255, 255, 255, 0.05)",
+              },
+              ticks: {
+                color: "rgba(255, 255, 255, 0.5)",
+                callback: function (value) {
+                  return value + "h"; // Adds 'h' suffix to Y-axis
+                },
+              },
+            },
+            x: {
+              grid: {
+                display: false,
+              },
+              ticks: {
+                color: "rgba(255, 255, 255, 0.5)",
+              },
+            },
+          },
+        },
+      });
+    }
+
+    // ✅ Navigation tabs (Updated to match Viewer Section IDs)
+    const navItems = document.querySelectorAll(".nav-item[data-target]");
+    const contentSections = document.querySelectorAll(".content-section");
+
+    navItems.forEach((item) => {
+      item.addEventListener("click", (e) => {
+        // Check if the button has a data-target (prevents breaking Logout/Home links)
+        const targetId = item.getAttribute("data-target");
+        if (!targetId) return;
+
+        e.preventDefault();
+
+        // 1. Reset active states on navigation
+        navItems.forEach((nav) => nav.classList.remove("active"));
+        item.classList.add("active");
+
+        // 2. Switch content sections
+        contentSections.forEach((section) =>
+          section.classList.remove("active-section"),
+        );
+
+        const targetSection = document.getElementById(targetId);
+        if (targetSection) {
+          targetSection.classList.add("active-section");
+        }
+
+        // 3. Mobile auto-close
+        if (window.innerWidth <= 768) {
+          sidebar.classList.remove("open");
+        }
+      });
+    });
+
+    // ✅ Profile dropdown (FIXED inside DOMContentLoaded)
+    const avatarBtn = document.getElementById("profile-avatar");
+    const profileDropdown = document.getElementById("profile-dropdown");
+
+    if (avatarBtn && profileDropdown) {
+      avatarBtn.addEventListener("click", (event) => {
+        event.stopPropagation();
+        profileDropdown.classList.toggle("show");
+      });
+
+      document.addEventListener("click", (event) => {
+        if (
+          profileDropdown.classList.contains("show") &&
+          !profileDropdown.contains(event.target)
+        ) {
+          profileDropdown.classList.remove("show");
+        }
+      });
+    }
+  });
+</script>

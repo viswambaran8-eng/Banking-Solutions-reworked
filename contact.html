@@ -1,0 +1,748 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Solutions</title>
+    <link rel="stylesheet" href="./contact.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./Assets/logo.webp" alt="" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" class="active-page">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="div">
+        <div class="div">
+          <a href="./login.html">
+            <button class="btn">Login</button>
+          </a>
+        </div>
+        <div class="menu-icon" id="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- <div class="sidebar-logo">STACKLY<span>.</span></div> -->
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="" />
+          </a>
+        </div>
+
+        <div class="close-icon" id="close-trigger">&times;</div>
+      </div>
+      <ul class="side-links">
+        <li class="side-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="side-item"><a href="./about.html">About</a></li>
+        <li class="side-item"><a href="./services.html">Services</a></li>
+        <li class="side-item"><a href="./blog.html">Blog</a></li>
+        <li class="side-item"><a href="./contact.html">Contact</a></li>
+        <li class="side-item"><a href="./login.html">Login</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <button class="side-log-btn">Open An Account</button>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="contact-hero">
+      <div class="terminal-container">
+        <div class="terminal-left">
+          <div class="status-indicator">
+            <span class="pulse-dot"></span> SECURE CONNECTION ESTABLISHED
+          </div>
+          <h1 class="terminal-title">
+            Let’s Engineer Your <span class="blue-text">Financial Future</span>
+          </h1>
+          <p class="terminal-desc">
+            Our surgical approach to asset management begins with a single
+            conversation. Connect with our tier-1 advisors across global time
+            zones.
+          </p>
+
+          <div class="location-nodes">
+            <div class="node">
+              <img
+                src="./Assets/mumbai_11zon.webp"
+                alt="Mumbai"
+              />
+              <div class="node-info">
+                <strong>Mumbai Hub</strong>
+                <span>BKC, Financial District</span>
+              </div>
+            </div>
+            <div class="node">
+              <img
+                src="./Assets/london_11zon.webp"
+                alt="London"
+              />
+              <div class="node-info">
+                <strong>London Office</strong>
+                <span>Canary Wharf, E14</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="terminal-right">
+          <div class="form-glass">
+            <div class="form-header">
+              <h3>Initialize Inquiry</h3>
+              <p>Protocol: G-256 Encryption Active</p>
+            </div>
+
+            <form
+              id="contactForm"
+              onsubmit="handleInquiry(event)"
+              action="./error.html"
+            >
+              <div class="input-group">
+                <input type="text" placeholder="Full Name" required />
+                <div class="input-glow"></div>
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="Corporate Email" required />
+                <div class="input-glow"></div>
+              </div>
+              <div class="input-group">
+                <select required>
+                  <option value="" disabled selected>Select Department</option>
+                  <option value="invest">Investment Strategy</option>
+                  <option value="loans">Surgical Lending</option>
+                  <option value="wealth">Wealth Preservation</option>
+                </select>
+              </div>
+              <textarea
+                placeholder="Message / Strategy Requirements"
+                rows="4"
+              ></textarea>
+
+              <button type="submit" class="btn-terminal">
+                <span>Send Message</span>
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="map-terminal">
+      <div class="container">
+        <div class="terminal-header">
+          <div class="header-badge">
+            <span class="badge-line"></span> GLOBAL REACH
+          </div>
+          <h2 class="hero-title">
+            Our <span class="blue-text">Headquarters</span>
+          </h2>
+          <p class="hero-subtitle">
+            BKC, Mumbai Financial District. Protocol: Tier-1 Hub.
+          </p>
+        </div>
+
+        <div class="map-stage">
+          <div class="map-bg">
+            <img
+              src="./Assets/map_11zon_11zon.webp"
+              alt="Dark Map"
+            />
+            <div class="map-overlay"></div>
+          </div>
+
+          <div class="map-marker">
+            <div class="marker-icon">
+              <i class="fa-solid fa-building-columns"></i>
+            </div>
+            <div class="pulse-ring ring-1"></div>
+            <div class="pulse-ring ring-2"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="support-terminal">
+      <div class="container">
+        <div class="terminal-header">
+          <div class="header-badge">
+            <span class="badge-line"></span> CONNECT TO NODE
+          </div>
+          <h2 class="hero-title">
+            Live <span class="blue-text">Support Channels</span>
+          </h2>
+          <p class="hero-subtitle">
+            Average Response Time: <span class="highlight">11 Seconds</span>.
+            Tier-1 priority access.
+          </p>
+        </div>
+
+        <div class="support-grid">
+          <div
+            class="icon-card"
+            id="call-node"
+            onmouseenter="activateNode(this)"
+            onmouseleave="deactivateNode(this)"
+          >
+            <div class="card-glow"></div>
+            <div class="card-header">
+              <div class="icon-box">
+                <i class="fa-solid fa-phone-volume"></i>
+              </div>
+              <span class="status-dot"></span> Active
+            </div>
+            <div class="card-body">
+              <h3>Call Support</h3>
+              <p>
+                Direct line to institutional advisors. 24/7 priority routing.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn-dispatch">
+                Initialize Call <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="icon-card featured"
+            id="chat-node"
+            onmouseenter="activateNode(this)"
+            onmouseleave="deactivateNode(this)"
+          >
+            <div class="card-glow"></div>
+            <div class="card-header">
+              <div class="icon-box">
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <span class="status-dot pulsing"></span> Live
+            </div>
+            <div class="card-body">
+              <h3>Live Chat</h3>
+              <p>
+                Instant secure messaging with our algorithmic support matrix.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn-dispatch">
+                Initialize Chat <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+
+          <div
+            class="icon-card"
+            id="email-node"
+            onmouseenter="activateNode(this)"
+            onmouseleave="deactivateNode(this)"
+          >
+            <div class="card-glow"></div>
+            <div class="card-header">
+              <div class="icon-box">
+                <i class="fa-solid fa-envelope-open-text"></i>
+              </div>
+              <span class="status-dot"></span> Queued
+            </div>
+            <div class="card-body">
+              <h3>Email</h3>
+              <p>
+                Asynchronous strategy inquiries and formal documentation
+                submission.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn-dispatch">
+                Send Dispatch <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="office-locations">
+      <div class="container">
+        <div class="terminal-header">
+          <div class="header-badge">
+            <span class="badge-line"></span> OPERATIONAL NODES
+          </div>
+          <h2 class="hero-title">
+            Our <span class="blue-text">Financial Hubs</span>
+          </h2>
+        </div>
+
+        <div class="location-grid">
+          <div class="location-card">
+            <div class="node-map-icon">
+              <i class="fa-solid fa-location-crosshairs"></i>
+            </div>
+            <div class="node-content">
+              <span class="node-tag">SOUTH HUB</span>
+              <h3>Chennai</h3>
+              <p>
+                T-Nagar, Financial Square. Managing regional liquidity and
+                fintech growth.
+              </p>
+              <div class="node-meta">
+                <span>COORD: 13.0827° N</span>
+                <span>STATUS: <span class="online">ONLINE</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-card">
+            <div class="node-map-icon">
+              <i class="fa-solid fa-location-crosshairs"></i>
+            </div>
+            <div class="node-content">
+              <span class="node-tag">HEADQUARTERS</span>
+              <h3>Mumbai</h3>
+              <p>
+                BKC, Tower A. Centralized command for global asset management.
+              </p>
+              <div class="node-meta">
+                <span>COORD: 19.0760° N</span>
+                <span>STATUS: <span class="online">ONLINE</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="location-card">
+            <div class="node-map-icon">
+              <i class="fa-solid fa-location-crosshairs"></i>
+            </div>
+            <div class="node-content">
+              <span class="node-tag">TECH CORE</span>
+              <h3>Bangalore</h3>
+              <p>
+                Indiranagar. Algorithmic trading and technology infrastructure
+                development.
+              </p>
+              <div class="node-meta">
+                <span>COORD: 12.9716° N</span>
+                <span>STATUS: <span class="online">ONLINE</span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-stats">
+      <div class="terminal-header">
+        <div class="header-badge">
+          <span class="badge-line"></span> ANALYTICAL VELOCITY
+        </div>
+
+        <h2 class="hero-title">
+          Operational <span class="blue-text">Performance</span>
+        </h2>
+
+        <p
+          class="hero-subtitle"
+          style="color: #64748b; font-size: 0.9rem; margin-top: 10px"
+        >
+          Institutional Grade Data •
+          <span class="blue-text">Node: Global-2026</span> • Accuracy: 99.9%
+        </p>
+      </div>
+      <div class="stats-container">
+        <div class="stat-item">
+          <div class="stat-value" data-target="24">0</div>
+          <div class="stat-label">
+            <span class="gradient-text">24/7 SUPPORT</span>
+            <p>Operational Uptime</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-value" data-target="2">0</div>
+          <div class="stat-label">
+            <span class="gradient-text">< 2 MIN RESPONSE</span>
+            <p>Average Latency</p>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-value" data-target="98">0</div>
+          <div class="stat-label">
+            <span class="gradient-text">98% SATISFACTION</span>
+            <p>Client Trust Index</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="premium-footer">
+      <div class="footer-upper">
+        <!-- Column 1: Brand & Brief -->
+        <div class="footer-col brand-col">
+          <div class="logo footer-logo">
+            <a href="./index.html">
+              <img src="./Assets/logo.webp" alt="NovaBank Logo" />
+            </a>
+          </div>
+          <p class="brand-brief">
+            Redefining the future of digital finance with medical-grade
+            precision and bank-grade security. Empowering global citizens with
+            seamless, intelligent banking solutions.
+          </p>
+          <div class="footer-socials">
+            <p><i class="fa-brands fa-linkedin-in"></i></p>
+            <p><i class="fa-brands fa-x-twitter"></i></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About </a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h4 class="footer-title">Banking Services</h4>
+          <ul class="footer-links">
+            <li><a href="./error.html">Personal Accounts</a></li>
+            <li><a href="./error.html">Business Solutions</a></li>
+            <li><a href="./error.html">Crypto Custody</a></li>
+            <li><a href="./error.html">Wealth Management</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter/Contact -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-title">Stay Connected</h4>
+          <p class="small-text">Subscribe for elite financial insights.</p>
+          <form class="footer-subscribe" action="./error.html">
+            <input type="email" placeholder="Email Address" />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i>+912345678</span>
+            <span><i class="fa-solid fa-envelope"></i>support@stackly.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="divider-line"></div>
+          <div class="bottom-flex">
+            <p class="copyright">
+              &copy; 2026 Stackly-Bank Solutions. All Rights Reserved.
+            </p>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </body>
+</html>
+
+<!-- footer -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.from(".footer-col", {
+      scrollTrigger: {
+        trigger: ".premium-footer",
+        start: "top 90%",
+      },
+      opacity: 0,
+      y: 40,
+      stagger: 0.15,
+      duration: 1,
+      ease: "power2.out",
+    });
+
+    // Fade in the bottom bar divider
+    gsap.from(".divider-line", {
+      scrollTrigger: ".footer-bottom",
+      opacity: 0,
+      duration: 2,
+      ease: "power4.inOut",
+    });
+  });
+</script>
+
+<!-- hero -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tl = gsap.timeline({
+      defaults: { ease: "power4.out", duration: 1.5 },
+    });
+
+    // 1. Reveal Sequence
+    tl.to(".terminal-left", { opacity: 1, x: 0 }).to(
+      ".terminal-right",
+      { opacity: 1, x: 0 },
+      "-=1.2",
+    );
+
+    // 2. Location Node Stagger
+    tl.from(
+      ".node",
+      {
+        opacity: 0,
+        y: 20,
+        stagger: 0.2,
+        duration: 0.8,
+      },
+      "-=1",
+    );
+
+    // 3. Magnetic Button Hover
+    const btn = document.querySelector(".btn-terminal");
+    btn.addEventListener("mousemove", (e) => {
+      const rect = btn.getBoundingClientRect();
+      const x = e.clientX - rect.left - rect.width / 2;
+      const y = e.clientY - rect.top - rect.height / 2;
+      gsap.to(btn, { x: x * 0.2, y: y * 0.2, duration: 0.3 });
+    });
+
+    btn.addEventListener("mouseleave", () => {
+      gsap.to(btn, { x: 0, y: 0, duration: 0.5 });
+    });
+  });
+
+  // --- FORM FUNCTION ---
+  function handleInquiry(event) {
+    event.preventDefault();
+    const btn = document.querySelector(".btn-terminal");
+
+    // Surgical feedback
+    btn.innerHTML = "Initializing Protocol...";
+    gsap.to(btn, { backgroundColor: "#22c55e", duration: 0.4 });
+
+    setTimeout(() => {
+      alert(
+        "Inquiry Dispatched. Our advisors will contact you within 1 business hour.",
+      );
+      btn.innerHTML =
+        '<span>Send Message</span> <i class="fa-solid fa-paper-plane"></i>';
+      gsap.to(btn, { backgroundColor: "rgb(32, 146, 192)", duration: 0.4 });
+      event.target.reset();
+    }, 2000);
+  }
+</script>
+
+<!-- 2 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".map-terminal",
+        start: "top 75%",
+      },
+    });
+
+    // 1. Entrance Sequence
+    tl.from(".terminal-header", {
+      opacity: 0,
+      y: 30,
+      duration: 1,
+      ease: "power3.out",
+    }).to(
+      ".map-stage",
+      {
+        autoAlpha: 1, // Opacity and visibility
+        duration: 1.2,
+        ease: "expo.out",
+      },
+      "-=0.6",
+    );
+
+    // 2. Initial Pin "Drop" (Bounce)
+    tl.from(
+      ".marker-icon",
+      {
+        y: -200,
+        opacity: 0,
+        duration: 1,
+        ease: "bounce.out",
+      },
+      "-=0.4",
+    );
+
+    // 3. INFINITE GSAP PULSE RINGS (Loop 1, 2, 3...)
+    // Ring 1 (Immediate Pulse)
+    gsap.to(".ring-1", {
+      width: 250, // Final size
+      height: 250,
+      opacity: 0, // Fade out
+      duration: 2.5,
+      repeat: -1, // Infinite loop
+      ease: "power2.out",
+      delay: 1, // Start shortly after entrance
+    });
+
+    // Ring 2 (Staggered Pulse)
+    gsap.to(".ring-2", {
+      width: 200,
+      height: 200,
+      opacity: 0,
+      duration: 2.5,
+      repeat: -1,
+      ease: "power2.out",
+      delay: 2.2, // Offset to create continuous flow
+    });
+  });
+</script>
+
+<!-- 3 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Entrance Sequence
+    gsap.to(".icon-card", {
+      scrollTrigger: {
+        trigger: ".support-grid",
+        start: "top 75%",
+      },
+      autoAlpha: 1, // Opacity and visibility
+      y: 0,
+      stagger: 0.2,
+      duration: 1.2,
+      ease: "power4.out",
+    });
+  });
+
+  // --- HOVER FUNCTIONS ---
+  // These are called via HTML onmouseenter/onmouseleave
+
+  function activateNode(card) {
+    const icon = card.querySelector(".icon-box i");
+
+    // A. Card Lift & Seamless Flow (Functional Scaling)
+    gsap.to(card, {
+      y: -10, // Suffix 1: Vertical lift
+      duration: 0.4,
+      ease: "power2.out",
+    });
+
+    // B. Icon Bounce (Dynamic Feedback)
+    gsap.fromTo(
+      icon,
+      { y: 0 },
+      {
+        y: -8, // Suffix 2: Bounce height
+        duration: 0.6,
+        ease: "bounce.out",
+      },
+    );
+  }
+
+  function deactivateNode(card) {
+    // Reset card and icon state smoothly
+    gsap.to(card, { y: 0, duration: 0.4 });
+    gsap.to(card.querySelector(".icon-box i"), { y: 0, duration: 0.3 });
+  }
+</script>
+
+<!-- 4,5 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Location Fade-In Stagger
+    gsap.to(".location-card", {
+      scrollTrigger: {
+        trigger: ".location-grid",
+        start: "top 80%",
+      },
+      opacity: 1,
+      y: 0,
+      stagger: 0.2,
+      duration: 1.2,
+      ease: "power3.out",
+    });
+
+    // 2. Stats Entrance and Count-Up
+    const statsTl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".contact-stats",
+        start: "top 80%",
+      },
+    });
+
+    statsTl.to(".stat-item", { opacity: 1, y: 0, stagger: 0.2, duration: 0.8 });
+
+    // 3. Counting Function
+    document.querySelectorAll(".stat-value").forEach((stat) => {
+      const target = +stat.getAttribute("data-target");
+      const suffix = stat.innerText.includes("%")
+        ? "%"
+        : stat.innerText.includes("<")
+          ? "<"
+          : "";
+
+      gsap.to(stat, {
+        innerText: target,
+        duration: 2.5,
+        snap: { innerText: 1 },
+        ease: "expo.out",
+        onUpdate: function () {
+          // Adding suffixes back if needed during count
+          if (target === 98)
+            stat.innerHTML = Math.ceil(this.targets()[0].innerText) + "%";
+          if (target === 2)
+            stat.innerHTML =
+              "< " + Math.ceil(this.targets()[0].innerText) + " MIN";
+          if (target === 24)
+            stat.innerHTML = Math.ceil(this.targets()[0].innerText) + "/7";
+        },
+      });
+    });
+  });
+</script>

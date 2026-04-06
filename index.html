@@ -1,0 +1,1433 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Solutions</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./Assets/logo.webp" alt="" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html" class="active-page">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="div">
+        <div class="div">
+          <a href="./login.html">
+            <button class="btn">Login</button>
+          </a>
+        </div>
+        <div class="menu-icon" id="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- <div class="sidebar-logo">STACKLY<span>.</span></div> -->
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="" />
+          </a>
+        </div>
+
+        <div class="close-icon" id="close-trigger">&times;</div>
+      </div>
+      <ul class="side-links">
+        <li class="side-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="side-item"><a href="./about.html">About</a></li>
+        <li class="side-item"><a href="./services.html">Services</a></li>
+        <li class="side-item"><a href="./blog.html">Blog</a></li>
+        <li class="side-item"><a href="./contact.html">Contact</a></li>
+        <li class="side-item"><a href="./login.html">Login</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <button class="side-log-btn">Open An Account</button>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <main class="hero-section">
+      <div class="hero-container">
+        <div class="hero-content">
+          <h3 class="tagline">Next-Gen Financial Ecosystem</h3>
+          <h1 class="main-title">
+            Bank Smarter.<br /><span class="highlight">Grow Faster.</span>
+          </h1>
+          <p class="description">
+            Experience secure, seamless, and intelligent banking designed for
+            your modern lifestyle. Manage assets, track real-time analytics, and
+            secure your future with our encrypted digital vault technology.
+          </p>
+
+          <div class="btn-group">
+            <a href="./error.html" class="btn btn-primary">💳 Open Account</a>
+            <a href="./error.html" class="btn btn-outline"
+              >📊 Explore Services</a
+            >
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-box">
+              <span class="stat-num">4.9/5</span>
+              <span class="stat-label">User Rating</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-num">256-bit</span>
+              <span class="stat-label">AES Encryption</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="dashboard-base">
+            <div class="main-ui-container">
+              <img
+                src="./Assets/indexhero1_11zon.webp"
+                alt="Dashboard 1"
+                class="main-ui slide-img"
+              />
+              <img
+                src="./Assets/indexhero2_11zon.webp"
+                alt="Dashboard 2"
+                class="main-ui slide-img"
+              />
+              <img
+                src="./Assets/indexhero3_11zon.webp"
+                alt="Dashboard 3"
+                class="main-ui slide-img"
+              />
+            </div>
+
+            <div class="float-element card-premium">
+              <img
+                src="./Assets/future-eco_11zon_11zon.webp"
+                alt="Credit Card"
+              />
+            </div>
+
+            <div class="float-element analytics-popup">
+              <!-- <p>Monthly Growth</p> -->
+              <img src="./Assets/Capital Growth_11zon.webp" alt="Chart" />
+            </div>
+
+            <div class="floating-icon icon-coin">🪙</div>
+            <div class="floating-icon icon-shield">🛡️</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <section class="services-section">
+      <div class="services-header">
+        <h3 class="tagline" data-gsap="fade">Our Expertise</h3>
+        <h2 class="services-title" data-gsap="fade">
+          Elite <span>Banking Services</span>
+        </h2>
+      </div>
+
+      <div class="services-grid">
+        <div class="elevated-card" data-tilt data-gsap="card">
+          <div class="card-glass-content">
+            <div class="icon-box">🏦</div>
+            <h4>Savings Account</h4>
+            <p>High-yield growth with instant liquidity.</p>
+
+            <div class="image-reveal">
+              <img src="./Assets/future-eco_11zon_11zon.webp" alt="Savings" />
+              <div class="image-overlay"></div>
+            </div>
+
+            <button class="action-btn">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="elevated-card" data-tilt data-gsap="card">
+          <div class="card-glass-content">
+            <div class="icon-box">💼</div>
+            <h4>Current Account</h4>
+            <p>Seamless management for global enterprises.</p>
+
+            <div class="image-reveal">
+              <img src="./Assets/current account_11zon.webp" alt="Business" />
+              <div class="image-overlay"></div>
+            </div>
+
+            <button class="action-btn">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="elevated-card" data-tilt data-gsap="card">
+          <div class="card-glass-content">
+            <div class="icon-box">🛡️</div>
+            <h4>Insurance</h4>
+            <p>Comprehensive protection for your legacy.</p>
+
+            <div class="image-reveal">
+              <img src="./Assets/insurance_11zon.webp" alt="Insurance" />
+              <div class="image-overlay"></div>
+            </div>
+
+            <button class="action-btn">
+              Explore <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-products">
+      <div class="services-header">
+        <h3 class="tagline" data-gsap="fade">Exclusive Offers</h3>
+        <h2 class="services-title" data-gsap="fade">
+          Featured <span>Financial Products</span>
+        </h2>
+      </div>
+
+      <div class="products-flex">
+        <div class="product-card" data-gsap="product">
+          <div class="product-badge">Best Seller</div>
+          <div class="product-image">
+            <img
+              src="./Assets/premium credit card_11zon_11zon.webp"
+              alt="Credit Card"
+            />
+          </div>
+          <div class="product-info">
+            <div class="rating">⭐ 4.8 <span>(1.2k Reviews)</span></div>
+            <h4>Premium Credit Card</h4>
+            <p class="main-offer">5% Cashback</p>
+
+            <div class="benefit-reveal">
+              <ul>
+                <li>✨ Airport Lounge Access</li>
+                <li>✨ Zero Joining Fee</li>
+                <li>✨ 24/7 Concierge</li>
+              </ul>
+            </div>
+            <a href="./error.html">
+              <button class="apply-btn">Apply Now</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-gsap="product">
+          <div class="product-image">
+            <img src="./Assets/servicehero_11zon.webp" alt="Loan" />
+          </div>
+          <div class="product-info">
+            <div class="rating">⭐ 4.6 <span>(800+ Users)</span></div>
+            <h4>Personal Loan</h4>
+            <p class="main-offer">Starting @10.5%</p>
+
+            <div class="benefit-reveal">
+              <ul>
+                <li>✨ Instant Disbursement</li>
+                <li>✨ Minimal Documentation</li>
+                <li>✨ Flexible Tenures</li>
+              </ul>
+            </div>
+
+            <a href="./error.html">
+              <button class="apply-btn">Apply Now</button>
+            </a>
+          </div>
+        </div>
+
+        <div class="product-card" data-gsap="product">
+          <div class="product-image">
+            <img src="./Assets/Auto Savings_11zon_11zon.webp" alt="Savings" />
+          </div>
+          <div class="product-info">
+            <div class="rating">⭐ 4.7 <span>(3k+ Savers)</span></div>
+            <h4>Smart Savings Plan</h4>
+            <p class="main-offer">Up to 7% Returns</p>
+
+            <div class="benefit-reveal">
+              <ul>
+                <li>✨ Compound Interest</li>
+                <li>✨ Tax Benefits</li>
+                <li>✨ Zero Withdrawal Fees</li>
+              </ul>
+            </div>
+
+            <a href="./error.html">
+              <button class="apply-btn">Apply Now</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="premium-offers-section">
+      <div class="services-header">
+        <h3 class="tagline" data-gsap="fade">Limited Access</h3>
+        <h2 class="services-title" data-gsap="fade">
+          ⚡ Limited Time <span>Financial Offers</span>
+        </h2>
+      </div>
+
+      <div class="main-offer-wrapper" data-gsap="card-reveal">
+        <div class="offer-bg-image">
+          <img
+            src="./Assets/Global currencies_11zon_11zon.webp"
+            alt="Banking Vault"
+          />
+          <div class="image-overlay"></div>
+        </div>
+
+        <div class="offer-glass-content">
+          <div class="content-left">
+            <p class="offer-desc">
+              Unlock exclusive, below-market rates on personal loans and premium
+              credit cards. Available for a 72-hour window only.
+            </p>
+            <div class="cta-group">
+              <a href="./error.html" class="btn-primary">Claim Your Offer</a>
+              <span class="spots-left">⚠️ Only 12 slots remaining</span>
+            </div>
+          </div>
+
+          <div class="content-right">
+            <div class="timer-box">
+              <div class="countdown-grid">
+                <div class="t-block">
+                  <span id="days">03</span><label>Days</label>
+                </div>
+                <div class="t-sep">:</div>
+                <div class="t-block">
+                  <span id="hours">00</span><label>Hrs</label>
+                </div>
+                <div class="t-sep">:</div>
+                <div class="t-block">
+                  <span id="minutes">00</span><label>Min</label>
+                </div>
+                <div class="t-sep">:</div>
+                <div class="t-block">
+                  <span id="seconds">00</span><label>Sec</label>
+                </div>
+              </div>
+
+              <div class="progress-track">
+                <div class="progress-fill" id="progressBar"></div>
+              </div>
+              <p class="progress-label">
+                Offer Progress: <span id="percentText">0%</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 -->
+    <section class="trusted-partners-section">
+      <div class="partners-header">
+        <h3 class="tagline" data-gsap="fade">Global Network</h3>
+        <h2 class="services-title" data-gsap="fade">
+          Partnered with leading <span>financial institutions</span> worldwide
+        </h2>
+      </div>
+
+      <div class="partners-carousel" id="partnersCarousel">
+        <div class="partners-track" id="partnersTrack">
+          <div class="partner-logo">
+            <img src="./Assets/icons8-visa-480.webp" alt="Visa" />
+          </div>
+          <div class="partner-logo">
+            <img src="./Assets/icons8-mastercard-500.webp" alt="Mastercard" />
+          </div>
+          <div class="partner-logo">
+            <img src="./Assets/icons8-paypal-96.webp" alt="Chase" />
+          </div>
+          <div class="partner-logo">
+            <img src="./Assets/icons8-paytm-96.webp" alt="Apple Pay" />
+          </div>
+          <div class="partner-logo">
+            <img src="./Assets/icons8-rupay-96.webp" alt="Stripe" />
+          </div>
+          <div class="partner-logo">
+            <img src="./Assets/icons8-amex-480.webp" alt="Goldman Sachs" />
+          </div>
+          <div class="partner-logo">
+            <img src="./Assets/icons8-google-pay-96.webp" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="banking-solutions">
+      <div class="services-header">
+        <h3 class="tagline" data-gsap="fade">Trusted by Millions</h3>
+        <h2 class="services-title" data-gsap="fade">
+          Popular <span>Banking Solutions</span>
+        </h2>
+      </div>
+
+      <div class="solutions-container">
+        <div class="solutions-wrapper">
+          <div class="solution-card" data-gsap="reveal">
+            <div class="card-image">
+              <img src="./Assets/instance transfer_11zon.webp" alt="Transfer" />
+              <div class="status-tag">🔥 Most Used</div>
+            </div>
+            <div class="card-content">
+              <h4>Instant Transfer</h4>
+              <p>
+                Send funds globally in under 60 seconds with zero hidden fees.
+              </p>
+              <a href="./error.html" class="learn-more"
+                >Get Started <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="solution-card" data-gsap="reveal">
+            <div class="card-image">
+              <img src="./Assets/bill payments_11zon.webp" alt="Bills" />
+            </div>
+            <div class="card-content">
+              <h4>Bill Payments</h4>
+              <p>Automate your utilities and never miss a due date again.</p>
+              <a href="./error.html" class="learn-more"
+                >Pay Now <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="solution-card" data-gsap="reveal">
+            <div class="card-image">
+              <img src="./Assets/upi_11zon.webp" alt="UPI" />
+            </div>
+            <div class="card-content">
+              <h4>UPI Transactions</h4>
+              <p>Seamless scan-and-pay at millions of merchants nationwide.</p>
+              <a href="./error.html" class="learn-more"
+                >Link Account <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+
+          <div class="solution-card" data-gsap="reveal">
+            <div class="card-image">
+              <img src="./Assets/investment plans_11zon.webp" alt="Invest" />
+            </div>
+            <div class="card-content">
+              <h4>Investment Plans</h4>
+              <p>Grow your wealth with AI-driven portfolio management.</p>
+              <a href="./error.html" class="learn-more"
+                >View Plans <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-features-section">
+      <div class="services-header">
+        <h3 class="tagline" data-gsap="fade">Future of Finance</h3>
+        <h2 class="services-title" data-gsap="fade">
+          Introducing <span>New Features</span>
+        </h2>
+      </div>
+
+      <div class="features-carousel" id="featuresCarousel">
+        <div class="features-track" id="featuresTrack">
+          <div class="feature-card">
+            <span class="new-tag">NEW</span>
+            <div class="feature-icon-wrapper">
+              <img src="./Assets/tracker_11zon.webp" alt="AI Tracker" />
+            </div>
+            <div class="feature-info">
+              <h4>AI Expense Tracker</h4>
+              <p>
+                Real-time categorization of every penny spent using neural
+                spending patterns.
+              </p>
+              <a href="./error.html">
+                <button class="feature-cta">Try Beta</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <span class="new-tag">NEW</span>
+            <div class="feature-icon-wrapper">
+              <img
+                src="./Assets/budgetting_11zon.webp"
+                alt="Budgeting"
+              />
+            </div>
+            <div class="feature-info">
+              <h4>Smart Budgeting</h4>
+              <p>
+                Set goals that adjust automatically based on your monthly income
+                fluctuations.
+              </p>
+              <a href="./error.html">
+                <button class="feature-cta">Try Beta</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <span class="new-tag">NEW</span>
+            <div class="feature-icon-wrapper">
+              <img
+                src="./Assets/Auto Savings_11zon_11zon.webp"
+                alt="Auto Savings"
+              />
+            </div>
+            <div class="feature-info">
+              <h4>Auto Savings</h4>
+              <p>
+                Round up every transaction to the nearest dollar and invest the
+                change.
+              </p>
+              <a href="./error.html">
+                <button class="feature-cta">Try Beta</button>
+              </a>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <span class="new-tag">NEW</span>
+            <div class="feature-icon-wrapper">
+              <img
+                src="./Assets/instant_11zon.webp"
+                alt="Virtual Cards"
+              />
+            </div>
+            <div class="feature-info">
+              <h4>Instant Virtual Cards</h4>
+              <p>
+                Generate disposable cards for secure online shopping in one tap.
+              </p>
+              <a href="./error.html">
+                <button class="feature-cta">Try Beta</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 -->
+
+    <section class="app-showcase-banner">
+      <div class="parallax-bg"></div>
+
+      <div class="showcase-container">
+        <div class="services-header showcase-header">
+          <h3 class="tagline" data-gsap="fade">Seamless Integration</h3>
+          <h2 class="services-title" data-gsap="fade">
+            Our <span>Mobile Experience</span>
+          </h2>
+        </div>
+
+        <div class="showcase-grid">
+          <div class="showcase-content">
+            <h1 class="showcase-headline" data-gsap="reveal">
+              Bank <span>Anywhere</span>, Anytime
+            </h1>
+            <p class="showcase-text" data-gsap="reveal">
+              Manage your finances effortlessly with our powerful mobile app.
+              Biometric security, instant transfers, and global access at your
+              fingertips.
+            </p>
+
+            <div class="app-buttons" data-gsap="reveal">
+              <a href="./error.html" class="btn-glow">Download Now</a>
+              <!-- <div class="store-icons">
+                <i class="fa-brands fa-apple"></i>
+                <i class="fa-brands fa-google-play"></i>
+              </div> -->
+            </div>
+          </div>
+
+          <div class="mockup-wrapper" data-gsap="mockup">
+            <img
+              src="./Assets/Mobile App UI_11zon.webp"
+              alt="Mobile App UI"
+              class="phone-img"
+            />
+            <div class="glow-sphere"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9 -->
+
+    <section class="testimonials-section">
+      <div class="services-header testimonials-header">
+        <h3 class="tagline" data-gsap="fade">Global Trust</h3>
+        <h2 class="services-title" data-gsap="fade">
+          What our <span>Customers</span> say
+        </h2>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Column 1 -->
+        <div class="testimonial-col">
+          <div class="testimonial-card glass-card" data-gsap="card-reveal">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="quote">
+              “Fast, secure, and incredibly easy to use. Best banking experience
+              ever.”
+            </p>
+            <div class="user-info">
+              <img src="./Assets/t1.webp" alt="Priya Nair" class="avatar" />
+              <div class="user-details">
+                <span class="name">Priya Nair</span>
+                <span class="role">Entrepreneur</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card" data-gsap="card-reveal">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="quote">
+              “The virtual cards feature is a lifesaver for my international
+              subscriptions. No more security worries.”
+            </p>
+            <div class="user-info">
+              <img src="./Assets/t3.webp" alt="Arjun Mehta" class="avatar" />
+              <div class="user-details">
+                <span class="name">Arjun Mehta</span>
+                <span class="role">Software Architect</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Column 2 (Offset for Masonry look) -->
+        <div class="testimonial-col offset-col">
+          <div class="testimonial-card glass-card" data-gsap="card-reveal">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="quote">
+              “The AI expense tracker is scary accurate. It identified spending
+              patterns I wasn't even aware of. Finally hitting my savings
+              goals!”
+            </p>
+            <div class="user-info">
+              <img src="./Assets/t2.webp" alt="Sarah Chen" class="avatar" />
+              <div class="user-details">
+                <span class="name">Sarah Chen</span>
+                <span class="role">Digital Nomad</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card glass-card" data-gsap="card-reveal">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="quote">“Cleanest UI I've ever seen in a banking app.”</p>
+            <div class="user-info">
+              <img src="./Assets/t4.webp" alt="Marcus V." class="avatar" />
+              <div class="user-details">
+                <span class="name">Marcus V.</span>
+                <span class="role">Designer</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-section">
+      <div class="services-header">
+        <h3 class="tagline" data-gsap="fade">The Future of Finance</h3>
+        <h2 class="services-title" data-gsap="fade">
+          Why <span>Choose</span> Our Platform
+        </h2>
+      </div>
+
+      <div class="why-grid">
+        <!-- Item 1 -->
+        <div class="why-item" data-gsap="magnetic">
+          <div class="neon-icon-wrapper">
+            <div class="neon-blob purple"></div>
+            <i class="fa-solid fa-shield-halved neon-icon"></i>
+          </div>
+          <div class="why-content">
+            <h4>Bank-grade Security</h4>
+            <p>Your assets are protected by multi-layer AES-256 encryption.</p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="why-item" data-gsap="magnetic">
+          <div class="neon-icon-wrapper">
+            <div class="neon-blob blue"></div>
+            <i class="fa-solid fa-bolt-lightning neon-icon"></i>
+          </div>
+          <div class="why-content">
+            <h4>Instant Transactions</h4>
+            <p>Send and receive funds globally in under 2 seconds.</p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="why-item" data-gsap="magnetic">
+          <div class="neon-icon-wrapper">
+            <div class="neon-blob red"></div>
+            <i class="fa-solid fa-chart-pie neon-icon"></i>
+          </div>
+          <div class="why-content">
+            <h4>Smart Insights</h4>
+            <p>AI-driven analytics to track and optimize your spending.</p>
+          </div>
+        </div>
+
+        <!-- Item 4 -->
+        <div class="why-item" data-gsap="magnetic">
+          <div class="neon-icon-wrapper">
+            <div class="neon-blob green"></div>
+            <i class="fa-solid fa-headset neon-icon"></i>
+          </div>
+          <div class="why-content">
+            <h4>24/7 Support</h4>
+            <p>Real human assistance whenever you need it, anywhere.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+
+    <footer class="premium-footer">
+      <div class="footer-upper">
+        <!-- Column 1: Brand & Brief -->
+        <div class="footer-col brand-col">
+          <div class="logo footer-logo">
+            <a href="./index.html">
+              <img src="./Assets/logo.webp" alt="NovaBank Logo" />
+            </a>
+          </div>
+          <p class="brand-brief">
+            Redefining the future of digital finance with medical-grade
+            precision and bank-grade security. Empowering global citizens with
+            seamless, intelligent banking solutions.
+          </p>
+          <div class="footer-socials">
+            <p><i class="fa-brands fa-linkedin-in"></i></p>
+            <p><i class="fa-brands fa-x-twitter"></i></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About </a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h4 class="footer-title">Banking Services</h4>
+          <ul class="footer-links">
+            <li><a href="./error.html">Personal Accounts</a></li>
+            <li><a href="./error.html">Business Solutions</a></li>
+            <li><a href="./error.html">Crypto Custody</a></li>
+            <li><a href="./error.html">Wealth Management</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter/Contact -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-title">Stay Connected</h4>
+          <p class="small-text">Subscribe for elite financial insights.</p>
+          <form class="footer-subscribe" action="./error.html">
+            <input type="email" placeholder="Email Address" />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i>+912345678</span>
+            <span><i class="fa-solid fa-envelope"></i>support@stackly.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="divider-line"></div>
+          <div class="bottom-flex">
+            <p class="copyright">
+              &copy; 2026 Stackly-Bank Solutions. All Rights Reserved.
+            </p>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- hero -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Register GSAP timeline
+        const tl = gsap.timeline({
+          defaults: { ease: "power3.out", duration: 1 },
+        });
+
+        // 1. Text Entrance (Fade-Up)
+        tl.to(".tagline", { opacity: 1, y: -20, delay: 0.2 })
+          .to(".main-title", { opacity: 1, y: -20 }, "-=0.7")
+          .to(".description", { opacity: 1, y: -20 }, "-=0.7")
+          .to(".btn-group", { opacity: 1, y: -20 }, "-=0.7")
+          .to(".hero-stats", { opacity: 1 }, "-=0.5");
+
+        // 2. Dashboard Slide-In
+        gsap.to(".hero-visual", {
+          opacity: 1,
+          duration: 1.5,
+          ease: "expo.out",
+          delay: 0.8,
+        });
+
+        // 3. Floating Loop Function
+        function floatLoop(target, yDistance, duration) {
+          gsap.to(target, {
+            y: yDistance,
+            duration: duration,
+            repeat: -1,
+            yoyo: true,
+            ease: "sine.inOut",
+          });
+        }
+
+        // Initialize floating animations
+        floatLoop(".card-premium", 15, 2.5);
+        floatLoop(".analytics-popup", -20, 3);
+        floatLoop(".icon-coin", 15, 2);
+        floatLoop(".icon-shield", -15, 2.8);
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Reveal the entire container
+        gsap.to(".hero-stats", {
+          opacity: 1,
+          y: -20,
+          duration: 1,
+          ease: "power2.out",
+          delay: 0.5,
+        });
+
+        // 2. Count Function for Rating (Decimal)
+        const ratingBox = { value: 0 };
+        gsap.to(ratingBox, {
+          value: 4.9,
+          duration: 2,
+          delay: 0.8,
+          ease: "power1.out",
+          onUpdate: () => {
+            document.querySelector(
+              ".stat-box:nth-child(1) .stat-num",
+            ).textContent = ratingBox.value.toFixed(1) + "/5";
+          },
+        });
+
+        // 3. Count Function for Encryption (Integer)
+        const encryptionBox = { value: 0 };
+        gsap.to(encryptionBox, {
+          value: 256,
+          duration: 2,
+          delay: 1,
+          ease: "expo.out",
+          onUpdate: () => {
+            document.querySelector(
+              ".stat-box:nth-child(2) .stat-num",
+            ).textContent = Math.floor(encryptionBox.value) + "-bit";
+          },
+        });
+      });
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const slides = document.querySelectorAll(".slide-img");
+        let currentSlide = 0;
+
+        // Initial setup: Ensure only the first slide is visible
+        gsap.set(slides, { opacity: 0 });
+        gsap.set(slides[0], { opacity: 1 });
+
+        function playSlideLoop() {
+          const nextSlide = (currentSlide + 1) % slides.length;
+
+          const tl = gsap.timeline();
+
+          // Fade out current, Fade in next
+          tl.to(slides[currentSlide], {
+            opacity: 0,
+            duration: 1,
+            scale: 1.05, // Subtle zoom out effect
+            ease: "power2.inOut",
+          });
+
+          tl.to(
+            slides[nextSlide],
+            {
+              opacity: 1,
+              duration: 1,
+              scale: 1,
+              ease: "power2.inOut",
+            },
+            "-=1",
+          ); // Overlap the animations for cross-fade
+
+          currentSlide = nextSlide;
+        }
+
+        // Run the loop every 4 seconds (3s display + 1s transition)
+        setInterval(playSlideLoop, 4000);
+      });
+    </script>
+
+    <!-- sections -->
+
+    <!-- 2 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. GSAP Staggered Entrance
+        gsap.to(".elevated-card", {
+          scrollTrigger: ".services-section",
+          opacity: 1,
+          y: -50,
+          stagger: 0.2,
+          duration: 1.2,
+          ease: "power4.out",
+        });
+
+        // 2. Interactive Tilt Logic
+        // const cards = document.querySelectorAll('.elevated-card');
+
+        // cards.forEach(card => {
+        //   card.addEventListener('mousemove', (e) => {
+        //     const rect = card.getBoundingClientRect();
+        //     const x = e.clientX - rect.left;
+        //     const y = e.clientY - rect.top;
+
+        //     const centerX = rect.width / 2;
+        //     const centerY = rect.height / 2;
+
+        //     const rotateX = (y - centerY) / 10;
+        //     const rotateY = (centerX - x) / 10;
+
+        //     gsap.to(card, {
+        //       rotateX: rotateX,
+        //       rotateY: rotateY,
+        //       duration: 0.5,
+        //       ease: "power2.out"
+        //     });
+        //   });
+
+        //   card.addEventListener('mouseleave', () => {
+        //     gsap.to(card, {
+        //       rotateX: 0,
+        //       rotateY: 0,
+        //       duration: 0.8,
+        //       ease: "elastic.out(1, 0.3)"
+        //     });
+        //   });
+        // });
+      });
+    </script>
+
+    <script>
+      gsap.to("[data-gsap='fade']", {
+        opacity: 1,
+        y: -20,
+        duration: 1,
+        stagger: 0.3,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".services-header",
+          start: "top 85%", // Starts animation when header is 85% from top of viewport
+        },
+      });
+    </script>
+
+    <!-- 3 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Reveal the Header
+        gsap.to(".featured-products .services-header *", {
+          scrollTrigger: ".featured-products",
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+        });
+
+        // Staggered Reveal for Product Cards
+        gsap.to(".product-card", {
+          scrollTrigger: {
+            trigger: ".products-flex",
+            start: "top 85%",
+          },
+          opacity: 1,
+          x: 0,
+          y: 0,
+          duration: 1.2,
+          stagger: 0.1, // Each card follows the other
+          ease: "power4.out",
+        });
+      });
+    </script>
+
+    <!-- 4 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. GSAP Entrance
+        gsap.to("[data-gsap='card-reveal']", {
+          scrollTrigger: ".premium-offers-section",
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power4.out",
+        });
+
+        // 2. Timer & Progress Logic (3 Days)
+        const totalDuration = 3 * 24 * 60 * 60; // 259,200 seconds
+        let timeRemaining = totalDuration;
+
+        const updateUI = () => {
+          if (timeRemaining <= 0) {
+            clearInterval(timerInterval);
+            document.getElementById("progressBar").style.width = "100%";
+            document.getElementById("percentText").innerText = "100%";
+            return;
+          }
+
+          const d = Math.floor(timeRemaining / (24 * 3600));
+          const h = Math.floor((timeRemaining % (24 * 3600)) / 3600);
+          const m = Math.floor((timeRemaining % 3600) / 60);
+          const s = Math.floor(timeRemaining % 60);
+
+          document.getElementById("days").innerText = String(d).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("hours").innerText = String(h).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("minutes").innerText = String(m).padStart(
+            2,
+            "0",
+          );
+          document.getElementById("seconds").innerText = String(s).padStart(
+            2,
+            "0",
+          );
+
+          // Progress: Calculate how much time has PASSED
+          const timePassed = totalDuration - timeRemaining;
+          const progressPercent = (timePassed / totalDuration) * 100;
+
+          document.getElementById("progressBar").style.width =
+            progressPercent + "%";
+          document.getElementById("percentText").innerText =
+            Math.floor(progressPercent) + "%";
+
+          timeRemaining--;
+        };
+
+        const timerInterval = setInterval(updateUI, 1000);
+        updateUI();
+      });
+    </script>
+
+    <!-- 5 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Reveal Section Header
+        gsap.to(".banking-solutions .services-header [data-gsap='fade']", {
+          scrollTrigger: ".banking-solutions",
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 1,
+        });
+
+        // 2. Horizontal Card Stagger
+        gsap.to(".solution-card", {
+          scrollTrigger: {
+            trigger: ".solutions-container",
+            start: "top 80%",
+          },
+          opacity: 1,
+          x: 0,
+          duration: 1.2,
+          stagger: 0.15,
+          ease: "power4.out",
+        });
+
+        // 3. Smooth Scroll Drag (Optional but Pro)
+        const slider = document.querySelector(".solutions-container");
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+
+        slider.addEventListener("mousedown", (e) => {
+          isDown = true;
+          startX = e.pageX - slider.offsetLeft;
+          scrollLeft = slider.scrollLeft;
+        });
+        slider.addEventListener("mouseleave", () => (isDown = false));
+        slider.addEventListener("mouseup", () => (isDown = false));
+        slider.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          const x = e.pageX - slider.offsetLeft;
+          const walk = (x - startX) * 2;
+          slider.scrollLeft = scrollLeft - walk;
+        });
+      });
+    </script>
+
+    <!-- 6 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const carousel = document.getElementById("featuresCarousel");
+        const track = document.getElementById("featuresTrack");
+        const cards = Array.from(track.children);
+
+        // 1. CLONE CARDS FOR INFINITE LOOP
+        cards.forEach((card) => {
+          const clone = card.cloneNode(true);
+          track.appendChild(clone);
+        });
+
+        const totalWidth = track.offsetWidth / 2;
+
+        // 2. GSAP INFINITE AUTO-LOOP
+        const loop = gsap.to(track, {
+          x: `-=${totalWidth}`,
+          duration: 30, // Slower for a more premium feel
+          ease: "none",
+          repeat: -1,
+          modifiers: {
+            x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+          },
+        });
+
+        // 3. SMOOTH X-AXIS DRAG LOGIC
+        let isDragging = false;
+        let startX = 0;
+        let dragX = 0;
+        let velocity = 0;
+        let rafID = null;
+
+        // Sync the loop's current position to our drag variables
+        const syncPosition = () => {
+          dragX = gsap.getProperty(track, "x");
+        };
+
+        const updateSmoothScroll = () => {
+          if (!isDragging) {
+            // Add friction/momentum after release
+            velocity *= 0.95;
+            dragX += velocity;
+
+            // Apply the position with infinite wrap
+            gsap.set(track, { x: dragX % totalWidth });
+
+            // Stop the animation frame if velocity is near zero
+            if (Math.abs(velocity) < 0.1) {
+              cancelAnimationFrame(rafID);
+              rafID = null;
+              if (!carousel.matches(":hover")) loop.play();
+              return;
+            }
+          }
+          rafID = requestAnimationFrame(updateSmoothScroll);
+        };
+
+        carousel.addEventListener("mousedown", (e) => {
+          isDragging = true;
+          loop.pause();
+          startX = e.pageX;
+          syncPosition();
+          carousel.classList.add("active");
+          if (!rafID) rafID = requestAnimationFrame(updateSmoothScroll);
+        });
+
+        window.addEventListener("mousemove", (e) => {
+          if (!isDragging) return;
+
+          const x = e.pageX;
+          const move = (x - startX) * 1.5; // Sensitivity
+          startX = x;
+
+          velocity = move; // Capture velocity for momentum
+          dragX += move;
+
+          gsap.set(track, { x: dragX % totalWidth });
+        });
+
+        window.addEventListener("mouseup", () => {
+          if (!isDragging) return;
+          isDragging = false;
+          carousel.classList.remove("active");
+          // Momentum continues in updateSmoothScroll()
+        });
+
+        // 4. HOVER PAUSE
+        carousel.addEventListener("mouseenter", () => {
+          if (!isDragging) loop.pause();
+        });
+
+        carousel.addEventListener("mouseleave", () => {
+          if (!isDragging && !rafID) loop.play();
+        });
+
+        gsap.set(".feature-card", { opacity: 1 });
+      });
+    </script>
+
+    <!-- 7 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const track = document.getElementById("partnersTrack");
+        const logos = Array.from(track.children);
+
+        // 1. CLONE LOGOS FOR INFINITE LOOP
+        // We double the content to make the marquee seamless
+        logos.forEach((logo) => {
+          const clone = logo.cloneNode(true);
+          track.appendChild(clone);
+        });
+
+        // 2. GSAP INFINITE SCROLL (Right to Left)
+        // Calculate total width of one set of logos
+        const totalWidth = track.offsetWidth / 2;
+
+        const marquee = gsap.to(track, {
+          x: `-=${totalWidth}`,
+          duration: 30, // Higher number = slower/more professional
+          ease: "none",
+          repeat: -1,
+          modifiers: {
+            x: gsap.utils.unitize((x) => parseFloat(x) % totalWidth),
+          },
+        });
+
+        // 3. INTERACTION: PAUSE ON HOVER
+        track.addEventListener("mouseenter", () => marquee.pause());
+        track.addEventListener("mouseleave", () => marquee.play());
+
+        // 4. HEADER REVEAL
+        gsap.to(".partners-header [data-gsap='fade']", {
+          scrollTrigger: ".trusted-partners-section",
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power2.out",
+        });
+      });
+    </script>
+
+    <!-- 8 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Header Reveal (Tagline and Title)
+        gsap.to(".showcase-header [data-gsap='fade']", {
+          scrollTrigger: ".app-showcase-banner",
+          opacity: 1,
+          y: 0,
+          stagger: 0.2,
+          duration: 1,
+          ease: "power2.out",
+        });
+
+        // 2. Content Reveal (Headline, Text, Buttons)
+        gsap.to(".showcase-content [data-gsap='reveal']", {
+          scrollTrigger: ".app-showcase-banner",
+          opacity: 1,
+          y: 0,
+          stagger: 0.15,
+          duration: 1,
+          delay: 0.4,
+          ease: "power3.out",
+        });
+
+        // 3. Phone Mockup Entrance
+        gsap.to("[data-gsap='mockup']", {
+          scrollTrigger: ".app-showcase-banner",
+          opacity: 1,
+          x: 0,
+          y: 0,
+          rotate: -5,
+          duration: 1.5,
+          ease: "expo.out",
+          delay: 0.6,
+        });
+      });
+    </script>
+
+    <!-- 9 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Staggered 3D Entrance
+        gsap.to("[data-gsap='card-reveal']", {
+          scrollTrigger: {
+            trigger: ".testimonials-grid",
+            start: "top 80%",
+          },
+          opacity: 1,
+          y: 0,
+          rotationX: 0,
+          stagger: 0.2,
+          duration: 1.5,
+          ease: "power4.out",
+        });
+      });
+    </script>
+
+    <!-- 10 -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // 1. Reveal Animation
+        gsap.to(".why-item", {
+          scrollTrigger: ".why-grid",
+          opacity: 1,
+          y: 0,
+          stagger: 0.4,
+          duration: 1,
+          ease: "back.out(1.7)",
+        });
+
+        // 2. Magnetic Effect
+        const magneticItems = document.querySelectorAll(
+          "[data-gsap='magnetic']",
+        );
+
+        magneticItems.forEach((item) => {
+          const icon = item.querySelector(".neon-icon");
+          const blob = item.querySelector(".neon-blob");
+
+          item.addEventListener("mousemove", (e) => {
+            const rect = item.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+
+            // Pull the icon and blob toward the mouse (Magnetic Feel)
+            gsap.to(icon, {
+              x: x * 0.3,
+              y: y * 0.3,
+              duration: 0.6,
+              ease: "power2.out",
+            });
+
+            gsap.to(blob, {
+              x: x * 0.15,
+              y: y * 0.15,
+              duration: 0.8,
+              ease: "power2.out",
+            });
+          });
+
+          item.addEventListener("mouseleave", () => {
+            // Reset position smoothly
+            gsap.to([icon, blob], {
+              x: 0,
+              y: 0,
+              duration: 1,
+              ease: "elastic.out(1, 0.3)",
+            });
+          });
+        });
+      });
+    </script>
+
+    <!-- footer -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".footer-col", {
+          scrollTrigger: {
+            trigger: ".premium-footer",
+            start: "top 90%",
+          },
+          opacity: 0,
+          y: 40,
+          stagger: 0.15,
+          duration: 1,
+          ease: "power2.out",
+        });
+
+        // Fade in the bottom bar divider
+        gsap.from(".divider-line", {
+          scrollTrigger: ".footer-bottom",
+          opacity: 0,
+          duration: 2,
+          ease: "power4.inOut",
+        });
+      });
+    </script>
+  </body>
+</html>

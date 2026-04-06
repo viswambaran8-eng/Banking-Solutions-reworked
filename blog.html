@@ -1,0 +1,853 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Banking Solutions</title>
+    <link rel="stylesheet" href="./blog.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="./index.html">
+          <img src="./Assets/logo.webp" alt="" />
+        </a>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html" class="active-page">About</a></li>
+          <li><a href="./services.html">Services</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="div">
+        <div class="div">
+          <a href="./login.html">
+            <button class="btn">Login</button>
+          </a>
+        </div>
+        <div class="menu-icon" id="menu-trigger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </header>
+
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-top">
+        <!-- <div class="sidebar-logo">STACKLY<span>.</span></div> -->
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./Assets/logo.webp" alt="" />
+          </a>
+        </div>
+
+        <div class="close-icon" id="close-trigger">&times;</div>
+      </div>
+      <ul class="side-links">
+        <li class="side-item">
+          <a href="./index.html">Home</a>
+        </li>
+        <li class="side-item"><a href="./about.html">About</a></li>
+        <li class="side-item"><a href="./services.html">Services</a></li>
+        <li class="side-item"><a href="./blog.html">Blog</a></li>
+        <li class="side-item"><a href="./contact.html">Contact</a></li>
+        <li class="side-item"><a href="./login.html">Login</a></li>
+      </ul>
+      <div class="sidebar-footer">
+        <button class="side-log-btn">Open An Account</button>
+      </div>
+    </aside>
+
+    <div class="overlay" id="overlay"></div>
+
+    <section class="banking-hero">
+      <div class="hero-container">
+        <div class="hero-left">
+          <div class="status-badge">
+            <span class="pulse-blue"></span>
+            System Status: Tier-1 Secure
+          </div>
+          <h1 class="hero-title">
+            The Future of <br /><span class="blue-text">Liquid Capital</span>
+          </h1>
+          <p class="hero-description">
+            Deploy institutional-grade banking solutions with surgical
+            precision. Real-time settlement, global scale, and total asset
+            transparency.
+          </p>
+          <div class="hero-cta">
+            <button class="btn-main" onclick="openPortal()">
+              Initialize Portal
+            </button>
+            <button class="btn-secondary" onclick="requestAudit()">
+              Request Audit
+            </button>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="hub-wrapper">
+            <div class="asset-card">
+              <div class="card-chip"></div>
+              <div class="card-logo">STACKLY<span>CORE</span></div>
+              <div class="card-number">**** **** **** 2026</div>
+              <div class="card-balance">
+                <small>Available Liquidity</small>
+                <h3>₹ <span id="balanceCount">0</span></h3>
+              </div>
+            </div>
+
+            <div class="data-node node-1">
+              <i class="fa-solid fa-globe"></i> SWIFT+
+            </div>
+            <div class="data-node node-2">
+              <i class="fa-solid fa-bolt"></i> INSTANT
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="filter-system">
+      <div class="filter-container">
+        <nav class="filter-nav">
+          <div class="active-slider"></div>
+
+          <button
+            class="filter-pill active"
+            onclick="filterContent(this, 'all')"
+          >
+            All
+          </button>
+          <button
+            class="filter-pill"
+            onclick="filterContent(this, 'investments')"
+          >
+            Investments
+          </button>
+          <button class="filter-pill" onclick="filterContent(this, 'loans')">
+            Loans
+          </button>
+          <button class="filter-pill" onclick="filterContent(this, 'savings')">
+            Saving Tips
+          </button>
+          <button class="filter-pill" onclick="filterContent(this, 'market')">
+            Market Trends
+          </button>
+        </nav>
+
+        <div class="content-grid" id="categoryGrid">
+          <div class="category-card" data-cat="investments">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/institutional_11zon.webp"
+                alt="Market"
+              />
+              <div class="card-meta">Institutional Equity</div>
+            </div>
+          </div>
+          <div class="category-card" data-cat="loans">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/insurance_11zon.webp"
+                alt="Loans"
+              />
+              <div class="card-meta">Insurance</div>
+            </div>
+          </div>
+          <div class="category-card" data-cat="savings">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/Capital Growth_11zon.webp"
+                alt="Savings"
+              />
+              <div class="card-meta">Capital Growth</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="investments">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/High Yield_11zon.webp"
+                alt="Equity"
+              />
+              <div class="card-meta">High Yield</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="investments">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/fixed asset_11zon.webp"
+                alt="Bonds"
+              />
+              <div class="card-meta">Fixed Asset</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="savings">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/bank secure_11zon.webp"
+                alt="Savings"
+              />
+              <div class="card-meta">Secure</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="savings">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/ihero1_11zon_11zon.webp"
+                alt="Retirement"
+              />
+              <div class="card-meta">Long Term</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="loans">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/instant_11zon.webp"
+                alt="Real Estate"
+              />
+              <div class="card-meta">Instant</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="loans">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/institutional_11zon.webp"
+                alt="Business"
+              />
+              <div class="card-meta">Institutional</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="market">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/Volatile_11zon.webp"
+                alt="Crypto"
+              />
+              <div class="card-meta">Volatile</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="market">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/Global currencies_11zon_11zon.webp"
+                alt="Currencies"
+              />
+              <div class="card-meta">Global</div>
+            </div>
+          </div>
+
+          <div class="category-card" data-cat="market">
+            <div class="card-image-wrapper">
+              <img
+                src="./Assets/commodities_11zon_11zon.webp"
+                alt="Commodities"
+              />
+              <div class="card-meta">Bullish</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="spotlight-section">
+      <div class="spotlight-card">
+        <div class="spotlight-bg">
+          <img
+            src="./Assets/finances_11zon.webp"
+            alt="Finance 2026"
+          />
+          <div class="spotlight-overlay"></div>
+        </div>
+
+        <div class="spotlight-content">
+          <div class="spotlight-badge">FEATURED ARTICLE</div>
+          <h1 class="spotlight-title">
+            Master Your <br /><span class="blue-text">Finances in 2026</span>
+          </h1>
+          <p class="spotlight-description">
+            Navigate the shift in global liquidity. Our comprehensive guide
+            breaks down institutional strategies for the modern digital era.
+          </p>
+          <div class="spotlight-footer">
+            <div class="read-time">
+              <i class="fa-regular fa-clock"></i> 8 Min Read
+            </div>
+            <a class="btn-spotlight" onclick="launchArticle()">
+              Access Protocol <i class="fa-solid fa-bolt"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trending-slider">
+      <div class="slider-header">
+        <div class="header-badge">
+          <span class="badge-line"></span> TRENDING NOW
+        </div>
+        <h2 class="hero-title">
+          Market <span class="blue-text">Insights</span>
+        </h2>
+      </div>
+
+      <div class="slider-container">
+        <div class="slider-track">
+          <div class="trend-card">
+            <div class="card-img">
+              <img
+                src="./Assets/upi_11zon.webp"
+                alt="Apps"
+              />
+            </div>
+            <div class="card-info">
+              <span class="card-index">01</span>
+              <h3>Top 5 Investment Apps</h3>
+              <p>Surgical review of 2026's leading fintech interfaces.</p>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="card-img">
+              <img
+                src="./Assets/passive income_11zon.webp"
+                alt="Income"
+              />
+            </div>
+            <div class="card-info">
+              <span class="card-index">02</span>
+              <h3>Build Passive Income</h3>
+              <p>Automated wealth protocols for the digital era.</p>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="card-img">
+              <img
+                src="./Assets/crypto_11zon_11zon.webp"
+                alt="Market"
+              />
+            </div>
+            <div class="card-info">
+              <span class="card-index">03</span>
+              <h3>Crypto Liquidity</h3>
+              <p>Analyzing high-velocity asset movements.</p>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="card-img">
+              <img
+                src="./Assets/corporate credit_11zon.webp"
+                alt="Business"
+              />
+            </div>
+            <div class="card-info">
+              <span class="card-index">04</span>
+              <h3>Corporate Credit</h3>
+              <p>Institutional lending shifts in Q2 2026.</p>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="card-img">
+              <img
+                src="./Assets/forex_11zon.webp"
+                alt="Forex"
+              />
+            </div>
+            <div class="card-info">
+              <span class="card-index">05</span>
+              <h3>Forex Stability</h3>
+              <p>Sovereign currency tracking and swap rates.</p>
+            </div>
+          </div>
+          <div class="trend-card">
+            <div class="card-img">
+              <img
+                src="./Assets/ai data assets_11zon.webp"
+                alt="Data"
+              />
+            </div>
+            <div class="card-info">
+              <span class="card-index">06</span>
+              <h3>AI Data Assets</h3>
+              <p>Monetizing algorithmic training sets.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- <section class="author-section">
+  <div class="slider-header">
+        <div class="header-badge">
+          <span class="badge-line"></span> TRENDING NOW
+        </div>
+        <h2 class="hero-title">
+          What <span class="blue-text">Author's Says</span>
+        </h2>
+      </div>
+  <div class="author-container">
+    
+    <div class="author-card" onmouseenter="revealSocials(this)" onmouseleave="hideSocials(this)">
+      <div class="author-image">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400" alt="Rahul Mehta">
+        <div class="image-overlay"></div>
+      </div>
+
+      <div class="author-info">
+        <div class="author-badge">STRATEGIST</div>
+        <h3 class="author-name">Rahul Mehta</h3>
+        <p class="author-title">Finance Expert & Tier-1 Analyst</p>
+        
+        <div class="social-reveal">
+          <a href="./error.html" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="./error.html" class="social-link"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="./error.html" class="social-link"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+      
+      <div class="card-glow-edge"></div>
+    </div>
+
+  </div>
+</section> -->
+
+    <!-- footer -->
+
+    <footer class="premium-footer">
+      <div class="footer-upper">
+        <!-- Column 1: Brand & Brief -->
+        <div class="footer-col brand-col">
+          <div class="logo footer-logo">
+            <a href="./index.html">
+              <img src="./Assets/logo.webp" alt="NovaBank Logo" />
+            </a>
+          </div>
+          <p class="brand-brief">
+            Redefining the future of digital finance with medical-grade
+            precision and bank-grade security. Empowering global citizens with
+            seamless, intelligent banking solutions.
+          </p>
+          <div class="footer-socials">
+            <p><i class="fa-brands fa-linkedin-in"></i></p>
+            <p><i class="fa-brands fa-x-twitter"></i></p>
+            <p><i class="fa-brands fa-instagram"></i></p>
+          </div>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="./about.html">About </a></li>
+            <li><a href="./services.html">Services</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./login.html">Login</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Services -->
+        <div class="footer-col">
+          <h4 class="footer-title">Banking Services</h4>
+          <ul class="footer-links">
+            <li><a href="./error.html">Personal Accounts</a></li>
+            <li><a href="./error.html">Business Solutions</a></li>
+            <li><a href="./error.html">Crypto Custody</a></li>
+            <li><a href="./error.html">Wealth Management</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Newsletter/Contact -->
+        <div class="footer-col contact-col">
+          <h4 class="footer-title">Stay Connected</h4>
+          <p class="small-text">Subscribe for elite financial insights.</p>
+          <form class="footer-subscribe" action="./error.html">
+            <input type="email" placeholder="Email Address" />
+            <button><i class="fa-solid fa-paper-plane"></i></button>
+          </form>
+          <div class="contact-info">
+            <span><i class="fa-solid fa-phone"></i>+912345678</span>
+            <span><i class="fa-solid fa-envelope"></i>support@stackly.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-container">
+          <div class="divider-line"></div>
+          <div class="bottom-flex">
+            <p class="copyright">
+              &copy; 2026 Stackly-Bank Solutions. All Rights Reserved.
+            </p>
+            <div class="legal-links">
+              <a href="#">Privacy Policy</a>
+              <a href="#">Terms of Service</a>
+              <a href="#">Cookie Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  </body>
+</html>
+
+<!-- footer -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    gsap.from(".footer-col", {
+      scrollTrigger: {
+        trigger: ".premium-footer",
+        start: "top 90%",
+      },
+      opacity: 0,
+      y: 40,
+      stagger: 0.15,
+      duration: 1,
+      ease: "power2.out",
+    });
+
+    // Fade in the bottom bar divider
+    gsap.from(".divider-line", {
+      scrollTrigger: ".footer-bottom",
+      opacity: 0,
+      duration: 2,
+      ease: "power4.inOut",
+    });
+  });
+</script>
+
+<!-- hero -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tl = gsap.timeline({ defaults: { ease: "expo.out", duration: 2 } });
+
+    // 1. Reveal Sequence
+    tl.to(".hero-left", { autoAlpha: 1, x: 0 }).to(
+      ".hero-right",
+      { autoAlpha: 1, x: 0 },
+      "-=1.5",
+    );
+
+    // 2. Liquidity Counter (GSAP)
+    const balance = { val: 0 };
+    gsap.to(balance, {
+      val: 8525000,
+      duration: 4,
+      ease: "power4.inOut",
+      onUpdate: () => {
+        document.getElementById("balanceCount").innerHTML = Math.floor(
+          balance.val,
+        ).toLocaleString("en-IN");
+      },
+    });
+
+    // 3. 3D Parallax Tilt
+    // window.addEventListener("mousemove", (e) => {
+    //   const x = (e.clientX / window.innerWidth - 0.5) * 40;
+    //   const y = (e.clientY / window.innerHeight - 0.5) * 40;
+
+    //   gsap.to(".asset-card", {
+    //     rotationY: x,
+    //     rotationX: -y,
+    //     duration: 1.2,
+    //     ease: "power2.out"
+    //   });
+
+    //   gsap.to(".node-1", { x: x * 1.5, y: y * 1.5, duration: 1.5 });
+    //   gsap.to(".node-2", { x: -x * 1.2, y: -y * 1.2, duration: 1.5 });
+    // });
+  });
+
+  // --- FUNCTIONS ---
+  function openPortal() {
+    console.log("Protocol 0: Initializing Global Asset Portal...");
+  }
+
+  function requestAudit() {
+    alert("Surgical Audit Log generated. Pending institutional review.");
+  }
+</script>
+
+<!-- 1 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // 1. Initialize Slider Position
+    const activeBtn = document.querySelector(".filter-pill.active");
+    const slider = document.querySelector(".active-slider");
+
+    if (activeBtn && slider) {
+      gsap.set(slider, {
+        width: activeBtn.offsetWidth,
+        x: activeBtn.offsetLeft - 8, // Adjust for padding
+      });
+    }
+
+    // 2. Entrance Reveal
+    gsap.to(".content-grid", { autoAlpha: 1, y: 0, duration: 1 });
+  });
+
+  // --- FUNCTIONAL LOGIC ---
+  function filterContent(btn, category) {
+    // Update Active Class
+    document
+      .querySelectorAll(".filter-pill")
+      .forEach((p) => p.classList.remove("active"));
+    btn.classList.add("active");
+
+    // A. Move the Underline Slider
+    gsap.to(".active-slider", {
+      x: btn.offsetLeft - 8,
+      width: btn.offsetWidth,
+      duration: 0.5,
+      ease: "expo.out",
+    });
+
+    // B. Content Fade Switch
+    const grid = document.getElementById("categoryGrid");
+    const cards = document.querySelectorAll(".category-card");
+
+    const tl = gsap.timeline();
+
+    // Fade out current
+    tl.to(grid, {
+      autoAlpha: 0,
+      y: 10,
+      duration: 0.3,
+      onComplete: () => {
+        // Logic to actually filter (Surgical Hide/Show)
+        cards.forEach((card) => {
+          if (category === "all" || card.dataset.cat === category) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      },
+    });
+
+    // Fade in new
+    tl.to(grid, {
+      autoAlpha: 1,
+      y: 0,
+      duration: 0.4,
+      ease: "power2.out",
+    });
+  }
+</script>
+
+<!-- 2 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".spotlight-card",
+        start: "top 75%",
+      },
+    });
+
+    // 1. Zoom out the background image
+    tl.to(".spotlight-bg img", {
+      scale: 1,
+      opacity: 0.5,
+      duration: 2.5,
+      ease: "power2.out",
+    });
+
+    // 2. Sequential Text Fade-Up
+    tl.to(".spotlight-badge", { autoAlpha: 1, duration: 0.8 }, "-=2")
+      .to(".spotlight-title", { autoAlpha: 1, y: 0, duration: 1 }, "-=1.5")
+      .to(
+        ".spotlight-description",
+        { autoAlpha: 1, y: 0, duration: 1 },
+        "-=1.2",
+      )
+      .to(".spotlight-footer", { autoAlpha: 1, duration: 0.8 }, "-=1");
+  });
+
+  // --- FUNCTION ---
+  function launchArticle() {
+    console.log("Protocol 2026: Opening Full Strategic Analysis...");
+  }
+</script>
+
+<!-- 4 -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".slider-track");
+  const cards = gsap.utils.toArray(".trend-card");
+  
+  // 1. Entrance Animation
+  gsap.to(track, { autoAlpha: 1, duration: 1.5, ease: "power2.out" });
+
+  // 2. Seamless Loop Setup (Stored in 'loop' variable)
+  const loop = horizontalLoop(cards, {
+    repeat: -1,
+    speed: 1, 
+    paddingRight: 30,
+    reversed: false
+  });
+
+  // --- 3. HOVER PAUSE LOGIC ---
+  track.addEventListener("mouseenter", () => {
+    // Smoothly slow down to 0 speed
+    gsap.to(loop, { timeScale: 0, duration: 0.6, ease: "power2.out" });
+  });
+
+  track.addEventListener("mouseleave", () => {
+    // Smoothly ramp back up to normal speed (1)
+    gsap.to(loop, { timeScale: 1, duration: 0.6, ease: "power2.in" });
+  });
+
+  // 4. Center Highlight Logic (Updated to use gsap.ticker for better performance)
+  gsap.ticker.add(() => {
+    const center = window.innerWidth / 2;
+    cards.forEach(card => {
+      const rect = card.getBoundingClientRect();
+      const cardCenter = rect.left + rect.width / 2;
+      const distanceFromCenter = Math.abs(center - cardCenter);
+
+      // Active state: Scale + Glow
+      if (distanceFromCenter < 200) {
+        gsap.to(card, { 
+          scale: 1.05, 
+          borderColor: "rgba(32, 146, 192, 0.6)",
+          backgroundColor: "rgba(32, 146, 192, 0.05)",
+          duration: 0.4 
+        });
+        card.classList.add("is-active");
+      } else {
+        gsap.to(card, { 
+          scale: 1, 
+          borderColor: "rgba(255, 255, 255, 0.05)",
+          backgroundColor: "rgba(255, 255, 255, 0.02)",
+          duration: 0.4 
+        });
+        card.classList.remove("is-active");
+      }
+    });
+  });
+});
+
+/* --- GSAP SEAMLESS LOOP HELPER FUNCTION --- */
+function horizontalLoop(items, config) {
+  items = gsap.utils.toArray(items);
+  config = config || {};
+  let tl = gsap.timeline({repeat: config.repeat, paused: config.paused, defaults: {ease: "none"}, onReverseComplete: () => tl.totalTime(tl.rawTime() + tl.duration() * 100)}),
+    length = items.length,
+    startX = items[0].offsetLeft,
+    times = [],
+    widths = [],
+    xPercents = [],
+    curIndex = 0,
+    pixelsPerSecond = (config.speed || 1) * 100,
+    snap = config.snap === false ? v => v : gsap.utils.snap(config.snap || 1), 
+    totalWidth, curX, distanceToStart, distanceToLoop, item, i;
+  
+  gsap.set(items, { 
+    xPercent: (i, el) => {
+      let w = widths[i] = parseFloat(gsap.getProperty(el, "width", "px"));
+      xPercents[i] = snap(parseFloat(gsap.getProperty(el, "xPercent", "%")) + (parseFloat(gsap.getProperty(el, "x", "px")) / w) * 100);
+      return xPercents[i];
+    }
+  });
+  gsap.set(items, {x: 0});
+  totalWidth = items[length-1].offsetLeft + xPercents[length-1] / 100 * widths[length-1] - startX + items[length-1].offsetWidth * gsap.getProperty(items[length-1], "scaleX") + (parseFloat(config.paddingRight) || 0);
+  for (i = 0; i < length; i++) {
+    item = items[i];
+    curX = xPercents[i] / 100 * widths[i];
+    distanceToStart = item.offsetLeft - startX + curX;
+    distanceToLoop = distanceToStart + widths[i] * gsap.getProperty(item, "scaleX");
+    tl.to(item, {xPercent: snap((curX - distanceToLoop) / widths[i] * 100), duration: distanceToLoop / pixelsPerSecond}, 0)
+      .fromTo(item, {xPercent: snap((curX - distanceToLoop + totalWidth) / widths[i] * 100)}, {xPercent: xPercents[i], duration: (curX - distanceToLoop + totalWidth - curX) / pixelsPerSecond, immediateRender: false}, distanceToLoop / pixelsPerSecond)
+      .add("label" + i, distanceToStart / pixelsPerSecond);
+    times[i] = distanceToStart / pixelsPerSecond;
+  }
+  return tl;
+}
+</script>
+
+<!-- author section -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  // Initial Entrance
+  gsap.from(".author-card", {
+    opacity: 1,
+    y: 40,
+    duration: 1.2,
+    ease: "power3.out"
+  });
+});
+
+// --- HOVER FUNCTIONS ---
+
+function revealSocials(card) {
+  const socials = card.querySelector('.social-reveal');
+  const links = card.querySelectorAll('.social-link');
+
+  // 1. Card Lift & Glow
+  gsap.to(card, {
+    y: -10,
+    borderColor: "rgba(32, 146, 192, 0.4)",
+    backgroundColor: "rgba(32, 146, 192, 0.03)",
+    duration: 0.4,
+    ease: "power2.out"
+  });
+
+  // 2. Reveal Icons with Stagger
+  gsap.to(socials, { autoAlpha: 1, y: 0, duration: 0.4 });
+  gsap.fromTo(links, 
+    { scale: 0.8, opacity: 0 },
+    { scale: 1, opacity: 1, stagger: 0.08, duration: 0.4, ease: "back.out(1.7)" }
+  );
+}
+
+function hideSocials(card) {
+  const socials = card.querySelector('.social-reveal');
+
+  // 1. Reset Card Position
+  gsap.to(card, {
+    y: 0,
+    borderColor: "rgba(255, 255, 255, 0.05)",
+    backgroundColor: "rgba(255, 255, 255, 0.02)",
+    duration: 0.4
+  });
+
+  // 2. Hide Icons
+  gsap.to(socials, { autoAlpha: 0, y: -10, duration: 0.3 });
+}
+</script>
